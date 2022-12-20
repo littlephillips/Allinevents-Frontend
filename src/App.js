@@ -9,6 +9,7 @@ import AdminPage from './pages/AdminPage'
 import BookingsPage from './pages/BookingsPage'
 import ContactPage from './pages/ContactPage'
 import ServicePage from './pages/ServicePage'
+import ProfilePage from "./pages/ProfilePage";
 
 
 //Admin
@@ -37,6 +38,7 @@ function App() {
       <Route path="/login" element={<LoginPage/>} />
       <Route path="/services/reviews" element={<ReviewsPage/>} />
       <Route path="/services" element={<ServicePage/>} />
+      <Route path="/profile" element={<ProfilePage/>} />
       <Route path="/signup" element={<SignupPage/>} />
       <Route path="/footer" element={<Footer/>} />
       <Route path="/admin/newevents" element={<NewEvents/>} />
@@ -47,3 +49,4 @@ function App() {
 }
 
 export default App;
+

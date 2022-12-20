@@ -14,15 +14,15 @@ return (
 	<Nav>
 		<Bars />
 
-		<NavMenu>
-      <NavLink to='/' activeStyle>  AllInEvents </NavLink>
-      <NavLink to='/services' activeStyle> Services </NavLink>
-      <NavLink to='/login' activeStyle> Admin</NavLink>
-		</NavMenu>
+	<NavMenu>
+		<NavLink to='/' activeStyle>  AllInEvents </NavLink>
+		<NavLink to='/services' activeStyle> Services </NavLink>
+		<NavLink to='/contact' activeStyle>Contact</NavLink>
+	</NavMenu>
 
-		<NavBtn>
-      <NavBtnLink to='/contact'>Contact</NavBtnLink>
-		</NavBtn>
+	<NavBtn>
+		<NavBtnLink>Admin</NavBtnLink>
+	</NavBtn>
 	</Nav>
 	</>
 );
