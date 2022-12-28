@@ -17,7 +17,7 @@ return (
 		<NavMenu>
       <NavLink to='/' activeStyle>  AllInEvents </NavLink>
       <NavLink to='/services' activeStyle> Services </NavLink>
-      <NavLink to='/login' activeStyle> Admin</NavLink>
+      <NavLink to='/admin' activeStyle> Admin</NavLink>
 		</NavMenu>
 
 		<NavBtn>
