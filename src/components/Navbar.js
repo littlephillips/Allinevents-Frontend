@@ -21,7 +21,7 @@ return (
 	</NavMenu>
 
 	<NavBtn>
-		<NavBtnLink>Admin</NavBtnLink>
+		<NavBtnLink to='/admin'>Admin</NavBtnLink>
 	</NavBtn>
 	</Nav>
 	</>
