@@ -13,7 +13,7 @@
     padding-right: 2rem;
 }
 
-.contact-heading h2 
+.contact-heading > h2 
 {
     color: rgba(37, 150, 190, 1);
     font-size: 2rem;
