@@ -18,28 +18,7 @@ function HomePage() {
         </section>
       </div>
 
-      {/* About Us */}
-      <div className='p-4 w-screen'>
-        <h1 className='text-center font-bold text-4xl mt-4'>About Us</h1>
-        <h3 className='text-center font-semibold text-sm p-4'>You know Events, We know you.</h3>
-        <h4 className='text-center font-semibold'>We Collaborate with our Partners to Deliver Successful Events</h4>
-
-        <div className='p-5 text-2xl flex space-x-4'>
-          <p className='w-1/2 '>Managing and booking events is stressful.  AllinEvents powers restaurants, hotels, 
-            and unique/special venues to book more catering, group, and event business and will increase sales without increasing your workload.
-          </p>
-
-          <div className='w-1/2 ml-4'>
-            <ul className='list-disc'>
-              <li>Streamline the booking process</li>
-              <li>Quickly create professional proposals, Banquet Event Orders, and contracts</li>
-              <li>Quickly create professional proposals, Banquet Event Orders, and contracts</li>
-              <li>Easily manage events and track sales, leads, and guest information for one or hundreds of venues</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
+     
 
 
 
@@ -117,11 +96,66 @@ function HomePage() {
             </div>
           </card>
         </div>
-
-        
-
-        
     </section>
+
+
+     {/* About Us */}
+     <div className='p-4 w-screen'>
+        <h1 className='text-center font-bold text-4xl mt-4'>About Us</h1>
+        <h3 className='text-center font-semibold text-sm p-4'>You know Events, We know you.</h3>
+        <h4 className='text-center font-semibold'>We Collaborate with our Partners to Deliver Successful Events</h4>
+
+        <div className='p-5 text-2xl flex space-x-4'>
+          <p className='w-1/2 '>Managing and booking events is stressful.  AllinEvents powers restaurants, hotels, 
+            and unique/special venues to book more catering, group, and event business and will increase sales without increasing your workload.
+          </p>
+
+          <div className='w-1/2 ml-4'>
+            <ul className='list-disc'>
+              <li>Streamline the booking process</li>
+              <li>Quickly create professional proposals, Banquet Event Orders, and contracts</li>
+              <li>Quickly create professional proposals, Banquet Event Orders, and contracts</li>
+              <li>Easily manage events and track sales, leads, and guest information for one or hundreds of venues</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      
+
+                                                      {/* Footer */}
+
+    <footer className='flex justify-around  bg-[#FFBD1D]'>
+      <h1>Logo</h1>
+
+      <div>
+        <h1 className='text-2xl font-extrabold' >Product</h1>
+        <ul>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Features</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h1 className='text-2xl font-extrabold'>Get Started</h1>
+        <ul>
+          <li>SignUp</li>
+          <li>Login</li>
+          <li>Book Event</li>
+        </ul>
+      </div>
+
+      <div>
+        <h1 className='text-2xl font-extrabold'>Help & Support</h1>
+        <ul>
+          <li>Help Center</li>
+          <li>Contact Us</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+    </footer>
    </>
   
    
