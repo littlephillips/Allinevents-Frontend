@@ -1,5 +1,5 @@
 import React from 'react'
-import './ReviewCard.css'
+import '../css/ReviewCard.css'
 
 function ReviewCard({ review:{name, body}}) {
   return (
