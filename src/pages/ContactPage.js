@@ -1,3 +1,4 @@
+import React from "react";
 import { FaMapMarkerAlt,FaPhone, FaMailBulk} from "react-icons/fa";
 import '../css/contact.css'
 
