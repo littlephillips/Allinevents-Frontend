@@ -12,7 +12,7 @@ function ReviewForm({handleNewReview}) {
   const handleSaveReview = async (e) => {
         e.preventDefault();
         console.log(formData);
-            const res = await fetch("https://my-json-server.typicode.com/StephenKairu/dummydbserver/Reviews", {
+            const res = await fetch("https://my-json-server.typicode.com/Kago-1/db/Reviews", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
