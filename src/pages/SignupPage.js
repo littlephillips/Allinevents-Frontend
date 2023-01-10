@@ -1,40 +1,55 @@
 import React from 'react'
-import '../css/SignupPage.css'
 
 function SignupPage() {
   return (
-    <form className='min-h-screen flex flex-col  items-center h-[410px] w-1/2 md:w-3/4 sm:w-screen sm:items-center sm:flex sm:justify-center sm:h-[700px] '>
-      <div class="form" className='bg-[#FFBD1D] rounded-md p-6  '>
-      <div class="title" className='text-white text-2xl font-bold mt-3 sm:text-xl'>Welcome</div>
-      <div class="subtitle" className='text-white text-sm font-semibold mt-2'>Let's create your account!</div>
-      <div class="input-container ic1" className=' relative  mt-10'>
-        <input id="firstname" class="input" type="text" placeholder="First Name " />
-        <div class="cut"></div>
-        <label for="firstname" class="placeholder">First name</label>
+    <div className='min-h-screen bg-slate flex flex-col items-center justify-center'>
+        <div class="w-full max-w-xs ">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+              Username
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+              First Name
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstName" type="text" placeholder="First Name" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+              Last Name
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastName" type="text" placeholder="Last Name" />
+          </div>
+          <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+              Password
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
+            <p class="text-red-500 text-xs italic">Please choose a password.</p>
+          </div>
+          <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+              Password
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
+            <p class="text-red-500 text-xs italic">Confirm password.</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+              Sign Up
+            </button>
+            <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" >
+              
+              Have an account?
+            </a>
+          </div>
+        </form>
       </div>
-      <div class="input-container ic2" className=''>
-        <input id="lastname" class="input" type="text" placeholder="Last Name " />
-        <div class="cut"></div>
-        <label for="lastname" class="placeholder">Last name</label>
-      </div>
-      <div class="input-container ic2">
-        <input id="email" class="input" type="text" placeholder="Email " />
-        <div class="cut cut-short"></div>
-        <label for="email" class="placeholder">Email</label>
-      </div>
-      <div class="input-container ic2">
-      <input id="password" class="input" type="password" placeholder="Password " />
-      <div class="cut"></div>
-        <label for="Password" class="placeholder">Password</label>
-      </div>
-      <div class="input-container ic2">
-      <input id="password" class="input" type="password" placeholder="Password " />
-      <div class="cut"></div>
-        <label for="Password" class="placeholder">Confirm Password</label>
-      </div>
-      <button type="text" class="submit" className='bg-[#2596BE] rounded-md box-border cursor-pointer text-2xl h-[46px] mt-10 text-center px-2 '>submit</button>
     </div>
-    </form>
+
   )
 }
 
