@@ -1,0 +1,30 @@
+.input{
+    background-color: #f2e294;
+    text-align: left;
+    border-radius: 5px;
+    border: 0;
+    box-sizing: border-box;
+    color: rgb(87, 87, 130);
+    font-size: 18px;
+    /* height: 100%; */
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 85%;
+}
+
+
+.placeholder {
+    line-height: 25px;
+    padding: 0;
+    font-size: larger;
+    pointer-events: none;
+    transform-origin: 0 50%;
+}
+
+.form{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+  
