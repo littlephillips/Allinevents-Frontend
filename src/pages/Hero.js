@@ -1,9 +1,8 @@
 import React from "react";
-import "./Hero.css";
+import "../css/Hero.css"
 
 
-
-const Hero = ({imageSrc}) =>{
+const Hero = () =>{
     return <div className="hero">
         <video src="https://assets.mixkit.co/videos/preview/mixkit-sequence-of-a-decorated-wedding-table-5224-large.mp4" autoPlay loop muted 
         alt="wedding reception" className="hero_image"/>

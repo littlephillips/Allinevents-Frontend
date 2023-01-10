@@ -15,6 +15,10 @@ import ProfilePage from "./pages/ProfilePage";
 //Admin
 import NewEvents from './components/NewEvents'
 
+//landing page
+import Hero from "./pages/Hero";
+
+
 //homepage
 import HomePage from './pages/HomePage'
 import SignupPage from './pages/SignupPage'
@@ -30,6 +34,13 @@ function App() {
   <BrowserRouter>
   <Navbar />
     <Routes>
+    <Route path='/' element= {
+        <>
+            <Hero />
+              
+              </>
+            }
+          />
       <Route path="/" element= {<HomePage/>} />
       <Route path="/about" element={<AboutPage/>} />
       <Route path="/admin" element={<AdminPage/>} />
