@@ -39,14 +39,14 @@ function App() {
         <>
             <Hero />
             <Slider
-                imageSrc={"https://images.squarespace-cdn.com/content/v1/57cf5e97414fb5a80f7a837b/1519410893820-Z6QV8X1Q4NFKBP6E9176/shutterstock_512157103.jpg?format=2500w"}
+                imageSrc={"https://cdn0.weddingwire.com/vendor/207389/original/960/jpeg/img-3866_51_983702.webp"}
                 title={"One Step Event Planner."}
                 subtitle={
                   "At AllEvents, we promise to make every special event in your life unforgetable...…"
                 }
               />
               <Slider
-                imageSrc={"https://media.istockphoto.com/id/1368180747/photo/cake-cutting-during-wedding-ceremony-with-fireworks-in-the-background.jpg?s=612x612&w=0&k=20&c=LT6lIUPLTTP9FVGdI266Cq9cl1a3tCC7oPB0efKCiBw="}
+                imageSrc={"https://cdn0.weddingwire.com/vendor/207389/original/960/jpg/1532957174-c608e41811a57ce6-1532957171-2f3f575b32371e33-1532957146191-16-2730EB80-C48A-442.webp"}
                 title={"Celebrate Affordably."}
                 subtitle={"You dont have to break the bank to get your dream wedding...."}
                 flipped={true}
