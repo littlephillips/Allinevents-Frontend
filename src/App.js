@@ -8,7 +8,7 @@ import AboutPage from './pages/AboutPage'
 import AdminPage from './pages/AdminPage'
 import BookingsPage from './pages/BookingsPage'
 import ContactPage from './pages/ContactPage'
-import ServicePage from './pages/ServicePage'
+//import ServicePage from './pages/ServicePage'
 import ProfilePage from "./pages/ProfilePage";
 
 
@@ -37,12 +37,12 @@ function App() {
       <Route path="/booking" element={<BookingsPage />} />
       <Route path="/login" element={<LoginPage/>} />
       <Route path="/services/reviews" element={<ReviewsPage/>} />
-      <Route path="/services" element={<ServicePage/>} />
+{/*<Route path="/services" element={<ServicePage/>} />*/}
       <Route path="/profile" element={<ProfilePage/>} />
       <Route path="/signup" element={<SignupPage/>} />
       <Route path="/footer" element={<Footer/>} />
       <Route path="/admin/newevents" element={<NewEvents/>} />
-      <Route path="/services/event" element={<Event/>} />
+      <Route path="/services" element={<Event/>} />
     </Routes>
   </BrowserRouter>
   )
