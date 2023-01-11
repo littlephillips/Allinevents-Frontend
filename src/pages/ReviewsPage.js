@@ -11,7 +11,8 @@ function Reviews() {
         const [reviews, setReviews] = useState([]);
 
         useEffect(() => {
-            fetch('https://my-json-server.typicode.com/Kago-1/db/Reviews')
+            // fetch('https://my-json-server.typicode.com/Kago-1/db/Reviews')
+            fetch(' http://localhost:3000/Reviews')
                .then(response => response.json())
                .then(reviews => setReviews(reviews))
 
