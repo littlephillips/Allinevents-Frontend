@@ -41,6 +41,10 @@ code {
 
 } */
 
+#header{
+  color:  rgba(255, 189, 29, 0.7);
+}
+
 #content-box{
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -89,7 +93,7 @@ img:hover {
 
 #carde:hover{
   transform: translate3D(0,-1px,0) scale(1.13);
-  background-color: lightgoldenrodyellow;
+  background-color:  rgba(255, 189, 29, 0.7);
 }
 #carde:hover image,
 #carde:hover p{
@@ -109,15 +113,40 @@ img:hover {
 #service_button{
   color: red;
   background-color: #ddd;
-  border-radius: 0%;
+  border-radius: 5px;
+  border:none;
   width: 100px;
   height: 40px;
   font-size: 17px;
   font-weight: 700;
   margin-top: 20px;
   text-transform: capitalize;
- 
+  padding :6px 10px;
+
+
 }
 #service_button:hover {
-  background: rgba(255, 189, 29, 0.7);
+  background: rgba(19, 18, 18, 0.7);
+
 }
+
+
+#service_button2{
+  color: red;
+  background-color: #ddd;
+  border-radius: 5px;
+  border:none;
+  width: 100px;
+  height: 40px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-transform: capitalize;
+  padding :6px 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+

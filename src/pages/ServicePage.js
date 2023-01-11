@@ -2,6 +2,7 @@ import React from 'react'
 // css
 import "../css/servicepage.css"
 
+
 function ServicePage({services}) {
   return (
     <div>
@@ -16,8 +17,12 @@ function ServicePage({services}) {
                   {services.description}
               </p>
               <button id="service_button">
-                <a href="#">Visit Page</a>
+                <a href="#">Book Now</a>
               </button>
+              <button id="service_button2">
+                <a href="#">Reviews</a>
+              </button>
+            
           </div>
         ))}
       </div>
