@@ -16,16 +16,17 @@ export const Bars = styled(FaBars)
 `
 display: none;
 color: #060b26; 
-@media screen and (max-width: 768px) {
-    display: block;
-    position:absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer
 }
 `;
+
+// @media screen and (max-width: 768px) {
+//     display: block;
+//     position:absolute;
+//     top: 0;
+//     right: 0;
+//     transform: translate(-100%, 75%);
+//     font-size: 1.8rem;
+//     cursor: pointer
 
 
 export const NavMenu = styled.div
@@ -33,10 +34,14 @@ export const NavMenu = styled.div
 display: flex;
 align-items:center;
 margin-right: 24px;
-@media screen and (max-width: 768px) {
-    display: none;
 }
 `;
+
+// @media screen and (max-width: 768px) {
+//     display: none;
+
+
+
 
 export const NavLink = styled(Link)
 `
@@ -85,7 +90,4 @@ text-decoration: none;
     color: #000;
 	font-weight: bolder;
 }
-
-
-
 `
