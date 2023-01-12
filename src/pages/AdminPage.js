@@ -10,13 +10,13 @@ function Admin() {
     const [event, setEvent] = useState({
         name:'',
         description:'',
-        services:[],
-        image: ''
+        services:'',
+        image: null
     })
     function handleChange(e){
         e.preventDefault();
 
-        const { value, name} = event.CurrentTarget;
+        const { value, name} = e.currentTarget;
 
         setEvent({
             ...event,
@@ -35,15 +35,16 @@ function Admin() {
             body: JSON.stringify ({
                 id: event.id,
                 name: event.name,
-                description: event.name,
+                description: event.description,
                 services: event.services,
                 image: event.image
             })
         })
+       
 
         const data = await res.json()
         setEvent([...event, data])
-
+        console.log(event)
     }       
 
     return (
@@ -80,7 +81,7 @@ function Admin() {
 
                         <input 
                             className='border border-black py-4 px-2 my-2 w-full' 
-                            type="textarea" name="desc" id="desc" placeholder='desc' 
+                            type="textarea" name="description" id="description" placeholder='description' 
                             value={event.description}
                             onChange={handleChange}
                         />
@@ -93,7 +94,7 @@ function Admin() {
                             onChange={handleChange}
                         />
 
-                        <input type="file" name="img" id="img" 
+                        <input type="file" name="image" id="image" 
                             onChange={handleChange}
                         />
 
