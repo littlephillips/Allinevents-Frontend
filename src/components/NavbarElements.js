@@ -32,6 +32,7 @@ color: #060b26;
 export const NavMenu = styled.div
 `
 display: flex;
+// flex: 1;
 align-items:center;
 margin-right: 24px;
 }

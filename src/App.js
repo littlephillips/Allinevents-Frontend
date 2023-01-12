@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
@@ -29,8 +29,11 @@ import Footer from './components/Footer'
 //services
 import Event from './components/Event'
 import ReviewsPage from './pages/ReviewsPage'
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
+  
+
   return(
   <BrowserRouter>
   <Navbar />
@@ -67,6 +70,7 @@ function App() {
       <Route path="/footer" element={<Footer/>} />
       <Route path="/admin/newevents" element={<NewEvents/>} />
       <Route path="/services" element={<Event/>} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>
   )
