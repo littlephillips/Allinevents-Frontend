@@ -13,7 +13,7 @@ import ProfilePage from "./pages/ProfilePage";
 
 
 //Admin
-import NewEvents from './components/NewEvents'
+// import NewEvents from './components/NewEvents'
 
 //landing page
 import Hero from "./pages/Hero";
@@ -50,7 +50,7 @@ function App() {
                 title={"Celebrate Affordably."}
                 subtitle={"You dont have to break the bank to get your dream wedding...."}
                 flipped={true}
-               />
+              />
               </>
             }
           />
@@ -60,12 +60,12 @@ function App() {
       <Route path="/contact" element={<ContactPage/>} />
       <Route path="/booking" element={<BookingsPage />} />
       <Route path="/login" element={<LoginPage/>} />
-      <Route path="/services/reviews" element={<ReviewsPage/>} />
+      <Route path="/reviews" element={<ReviewsPage/>} />
 {/*<Route path="/services" element={<ServicePage/>} />*/}
       <Route path="/profile" element={<ProfilePage/>} />
       <Route path="/signup" element={<SignupPage/>} />
       <Route path="/footer" element={<Footer/>} />
-      <Route path="/admin/newevents" element={<NewEvents/>} />
+      {/* <Route path="/admin/newevents" element={<NewEvents/>} /> */}
       <Route path="/services" element={<Event/>} />
     </Routes>
   </BrowserRouter>

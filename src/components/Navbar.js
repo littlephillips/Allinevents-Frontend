@@ -14,9 +14,9 @@ return (
 	<Nav>
 		<Bars />
 	<NavMenu>
-		<NavLink to='/' activeStyle>  AllInEvents </NavLink>
-		<NavLink to='/services' activeStyle> Services </NavLink>
-		<NavLink to='/contact' activeStyle>Contact</NavLink>
+		<NavLink to='/' >  AllInEvents </NavLink>
+		<NavLink to='/services'> Services </NavLink>
+		<NavLink to='/contact' >Contact</NavLink>
 	</NavMenu>
 
 

@@ -4,31 +4,29 @@ import '../css/Reviews.css'
 function ReviewForm({handleNewReview}) {
 
   const [formData,setFormData]=useState([{
-    name:"",
+    fullname:"",
     email: "",
     comment:"",
   }])
 
   const handleSaveReview = async (e) => {
         e.preventDefault();
-        console.log(formData);
-            // const res = await fetch("https://my-json-server.typicode.com/Kago-1/db/Reviews", {
-              const res = await fetch("http://localhost:3000/Reviews", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    id:formData.id,
-                    name: formData.name,
-                    email: formData.email,
-                    comment: formData.comment,
-                }),
+          const res = await fetch("/comments", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                id:formData.id,
+                fullname: formData.fullname,
+                email: formData.email,
+                comment: formData.comment,
+            }),
             });
             const response = await res.json();
             handleNewReview(response);
             setFormData([{
-              name:"",
+              fullname:"",
               email: "",
               comment:"",
             }]);
@@ -51,7 +49,7 @@ function ReviewForm({handleNewReview}) {
                 <form onSubmit={handleSaveReview} className="comment-form">
                   <div>
                     <label for="name" className="text-sm font-bold">Name</label>
-                    <input value={formData.name} onChange={handleChange} name='name' type="text" placeholder="Your name?" className="w-full p-3 rounded dark:bg-gray-800" />
+                    <input value={formData.fullname} onChange={handleChange} name='fullname' type="text" placeholder="Your name?" className="w-full p-3 rounded dark:bg-gray-800" />
                   </div> <br />
                   <div>
                     <label for="email" className="text-sm font-bold">Email</label>

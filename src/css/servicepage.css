@@ -3,50 +3,25 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-/* #wrapper{
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  background: #fafafa;
-  margin-top: 30px;
-  width: 100%;
-} */
-
-/* #wrapper h1{
-  font-size: 3em;
-  margin: 25px 0;
-  text-align: center;
-  font-weight: 500;
-
-} */
+.services-page
+{
+  background:#333;
+}
 
 #header{
   color:  rgba(255, 189, 29, 0.7);
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 #content-box{
-  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -59,14 +34,14 @@ code {
   width:25vw;
   padding: 30px;
   border-radius: 5px;
-  background: whitesmoke;
+  background-color: #ebebeb; 
   margin: 12px 6px;
   box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
   text-align: center;
   margin-bottom: 50px;
 }
 
-img{
+#carde img{
   display: inline-block;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -75,27 +50,25 @@ img{
   margin-bottom: 20px;
 }
 
-img:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+#carde img:hover {
+  box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
+  filter: grayscale(100%);
 }
 
 #carde h2{
   margin-bottom: 12px;
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 25px;
   text-align: center;
 }
 
 #carde p{
-  color: #6c757d;
+  color: #127bd8;
   text-align: center;
-  min-height: 250px;
+  font-size: 22px;
+  min-height: 10px;
 }
 
-#carde:hover{
-  transform: translate3D(0,-1px,0) scale(1.13);
-  background-color:  rgba(255, 189, 29, 0.7);
-}
-#carde:hover image,
 #carde:hover p{
   color: gray;
   font-weight: 600;
@@ -104,49 +77,105 @@ img:hover {
   font-weight: 900;
 }
 
-/* #button{
-  padding: 5px;
-  text-align: center;
-  margin-bottom: 12px;
-} */
 
-#service_button{
-  color: red;
-  background-color: #ddd;
+#carde ul
+{
+  width: 80%;
+  padding: 10px;
+  margin: 0 10%;
+}
+
+#carde ul li
+{
+  color: rgb(19, 6, 6);
+  font-size: 20px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.services-buttons
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+}
+
+.service_button-book,
+.service_button-review
+{
+  width: 30%;
+  background-color: red;
+  height: 50%;
+  margin: 10%;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
   border-radius: 5px;
-  border:none;
-  width: 100px;
-  height: 40px;
-  font-size: 17px;
-  font-weight: 700;
-  margin-top: 20px;
-  text-transform: capitalize;
-  padding :6px 10px;
-
-
+  outline: none;
 }
-#service_button:hover {
-  background: rgba(19, 18, 18, 0.7);
 
+.service_button-book
+{
+  background-color: rgb(25, 63, 212);
 }
 
 
-#service_button2{
-  color: red;
-  background-color: #ddd;
-  border-radius: 5px;
-  border:none;
-  width: 100px;
-  height: 40px;
-  font-size: 17px;
-  font-weight: 700;
-  margin-top: 20px;
-  text-transform: capitalize;
-  padding :6px 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.service_button-book:hover
+{
+  background-color: rgb(143, 212, 25);
+  color:rgb(19, 6, 6);
+}
+
+
+.service_button-review:hover
+{
+  background-color: blueviolet;
 }
 
 
 
+@media only screen and (max-width: 768px)
+{
+  #content-box
+  {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #carde
+  {
+    width: 100%;
+  }
+
+  #carde img{
+    width: 50%;
+    height: 250px;
+  }
+
+}
+
+@media only screen and (max-width: 992px)
+
+{
+  #content-box
+  {
+    display: inline-block;
+    /* margin-left: 100px; */
+  }
+
+  #carde
+  {
+    width: 100%;
+    height: auto;
+  }
+
+  #carde img{
+    width: 60%;
+    height: 350px;
+  }
+
+}
