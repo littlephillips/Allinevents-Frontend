@@ -1,33 +1,37 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 // css
 import "../css/servicepage.css"
 
 
 function ServicePage({services}) {
   return (
-    <div>
+    <div className="services-page">
       <h1 id="header">Our services</h1>
-      {/* <div id="wrapper"> */}
       <div id="content-box">
         {services.map((services) => (
           <div id="carde">
-            <img src= {services.picture} alt= 'service'/>
-              <h2>{services.title}</h2>
+            <img src= {services.image_url} alt= 'service'/>
+              <h2>{services.eventname}</h2>
               <p>
                   {services.description}
               </p>
-              <button id="service_button">
-                <a href="#">Book Now</a>
+              <ul>
+                <li>{services.services}</li>
+              </ul>
+              <div className='services-buttons'>
+              <button className="service_button-book">
+                <NavLink to="/booking">Book</NavLink>
               </button>
-              <button id="service_button2">
-                <a href="#">Reviews</a>
+              <button className="service_button-review">
+                <NavLink to="/reviews">Review</NavLink>
               </button>
+          </div>
             
           </div>
         ))}
       </div>
-       {/* </div> */}
-      </div>  
+    </div>  
   )
 }
 

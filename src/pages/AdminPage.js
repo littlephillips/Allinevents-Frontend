@@ -40,7 +40,6 @@ function Admin() {
                 image: event.image
             })
         })
-       
 
         const data = await res.json()
         setEvent([...event, data])

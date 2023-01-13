@@ -1,240 +1,139 @@
-.bookings-container {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+
+.form_box 
+{
+    background-color: #ebebeb; 
+    width: 450px;
+    max-width: 90%;
+    margin: 3% auto;
+    padding: 20px 10px;
+    border: 1px solid #cbc9c9;
+    border-radius: 8px/7px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31);
 }
-.bookings-h1
+
+
+
+.form_box > h1 
 {
     color: rgba(37, 150, 190, 1);
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 500;
     text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
 }
 
-.form-group
+.booking-form
 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    padding-top: 15px;
-}   
-
-.bookings-form
-{
-    width: 45%;
-    display: grid;
-    place-items: center;
+    margin: 0 2%;
 }
 
-.main-form
+hr 
 {
-    background-color:#FFF;
-    width: 100%;
-    padding: 10px;    
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba(187, 183, 183, 0.8),
-    inset 3px 3px 3px rgba(204, 198, 198, 0.9);
+    color: #444866;
+    opacity: 0.3;
 }
 
-.main-form > h1
+.booking-form > h2 ,
+h3, h4
 {
+
     color: rgba(37, 150, 190, 1);
-    font-size: 2rem;
-    padding-top: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
 }
+
+
+#icon 
+{
+    display: inline-block;
+    width: 30px;
+    background-color:#444866;
+    padding: 12px 0px 11px 15px; 
+    color: white;
+    margin-left: 15px;
+    padding: 12px 0px 11px 15px;
+    margin-left: 15px;
+    border: solid 0px #cbc9c9;
+    border-radius: 4px 0px 0px 4px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+} 
 
 .inner-form
 {
-    border: none;
-    margin: 33px 0;
-} 
-
-
-.inner-form > input
-{ 
-    background: transparent;
-    width: 100%; height: 50px;
-    font-size: 21.5px;
-    border: 1px solid rgba(37, 150, 190, 1);
-    border-radius: 4px;
-    padding-left: 12px;
-} 
-
-.inner-form > input, input::placeholder
-{
-    color: rgb(116, 112, 112);
+    font-size: 18px;
+    color: #444866;
+    background-color: #fff; 
+    max-width: 75%;
+    width: 300px;
+    height: 50px;
+    margin-left: 50px;
+    margin-top: 13px;
+    padding-left: 10px;
+    border: solid 1px #cbc9c9;
+    border-radius: 3px 7px 4px 4px/5px 8px 4px 6px; 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
 }
 
-.booking-button-profile
+.inner-form.telephone
 {
-    background: rgba(216, 166, 15, 0.7);
-    width: 30%; height: auto;
-    padding: 5px;
-    border-radius: 10px;
-    font-size: 20px;
-    color: #000;
+    margin-bottom: 25px;
+} 
+
+.inner-form
+{
+
+    border: none;
+    outline: none;
+}
+
+.date_required, 
+.event_required 
+{
+    margin-bottom: 30px;
+}
+
+.allinterms
+{
+    font-size: 15px;
+    display: block;
+    margin: 0 15px 15px 15px;
+}
+
+.terms-booking
+{
+    color: rgb(12, 129, 245);
+    font-weight: 400;
+}
+
+.terms-booking:hover
+{
+    color: rgb(81, 4, 206);
     font-weight: 800;
 }
 
 
-.booking-button-profile:hover, 
-.events-search-button:hover, 
-.booking-button:hover
+.booking-button
 {
-    background: rgba(37, 150, 190, 1); 
-    color:#FFF;
-} 
-
-.display-event
-{
-    width: 50%;  height: auto;
-    background-color: #FFF;
-    margin-left: 5%;
-    box-shadow: 5px 5px 5px rgba(187, 183, 183, 0.8),
-    inset 3px 3px 3px rgba(204, 198, 198, 0.9); 
-}
-
-.display-event > h2
-{
-    color: rgba(37, 150, 190, 1);
-    font-size: 2rem;
-    font-weight: 450;
-    text-align: center;
-} 
-
-.event-search-filter
-{
-    display: flex;
-    width: 100%;
-    padding: 2px;
-    margin-top: 15px;
-}
-
-
-.event-search-filter > .search 
-{
-    width: 50%; height: auto;
-    color: #000;
-    font-size: 1rem; font-weight: 400;
-    border: 3px solid rgba(37, 150, 190, 1);
-    border-radius: 11px;
-    text-align: center;
-    padding: 10px;
-    margin-left: 5%;
-    outline: none;
-} 
-
-.event-search-filter > .search:hover
-{
-    background-color: rgba(37, 150, 190, 1); 
-    border: none;
-    color:#FFF;
-}
-
-.events-search-button
-{
-    background-color:rgba(216, 166, 15, 0.7);
-    width: 30%; height: auto;
-    margin-left: 10%;
-    border-radius: 15px;
-    color: #000;
-    text-align: center;
-    font-size: 1.5rem;
+    background-color:rgba(37, 150, 190, 1);
+    font-size: 14px;
     font-weight: 600;
-    padding: 10px;
-} 
-
-.display-event > #display-events
-{
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%; height: auto;
-    overflow-x:auto;
-    margin-top: 32px;
-    border:none;
-} 
-
-#display-events td, #display-events th {
-    border: 1px solid rgba(37, 150, 190, 1);
-    border-radius: 3px;
-    text-align: left;
-    font-size: 20px;
-    padding: 10px;
+    color:#FFF;
+    padding: 12px 20px;
+    margin-left: 15px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;  
+    box-shadow: 0 3px rgba(58,87,175,.75);
+    transition: all 0.1s linear 0s; 
+    top: 0px;
+    position: relative;
 }
 
-#display-events td
+
+
+.booking-button:hover 
 {
-    height: 50px;
-    vertical-align: center;
+    background-color:#444866;
 }
-
-.backend-images
-{
-    width: 100px;
-    height: 100px;
-    display: grid;
-    place-items: center;
-}
-
-#display-events tr:hover
-{
-    background-color: rgba(37, 150, 190, 1); 
-    color: #FFF;
-    border: none;
-}
-
-.bookings-footer
-{
-    display: grid;
-    place-items: center;
-} 
-
-.bookings-footer > h3
-{
-    color: rgba(37, 150, 190, 1);
-    font-size: 2rem;
-    margin-top: 30px;
-    
-}  
-
-@media screen and (max-width: 1200px)
-{
-    .form-group{
-        display: grid;
-        place-items: center;
-        width: 100%;
-        height: auto;
-    } 
-    .bookings-form {
-        width: 80%;
-        margin-left: 10%;
-        padding-top: 20px;        
-    }  
-    
-    .display-event{
-        display: block;
-        width: 90%;
-        padding: 5px;
-        height: 78vh;
-        margin-bottom: 10px;
-        margin-left: 22px;
-    } 
-    
-    #display-events td, 
-    #display-events th {
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: left;
-        font-size: 15px;
-    }
-
-    .bookings-footer
-    {
-        margin-top: 20px;
-    }
-
-    .backend-images
-    {
-    width: 70px;
-    height: 80px;
-    } 
-}  

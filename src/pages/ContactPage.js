@@ -1,10 +1,50 @@
-import React from "react";
+import React, {useState} from "react";
 import { FaMapMarkerAlt,FaPhone, FaMailBulk} from "react-icons/fa";
 import '../css/contact.css'
 
 
 
 export default function ContactPage() {
+const [engage, setEngage] = useState({
+  fullname:"",
+  email: "",
+  comment:""
+})
+
+function handleChange(e){
+  e.preventDefault()
+  const { value, name} = e.currentTarget;
+
+  setEngage({
+    ...engage,
+    [name]: value
+  });
+}
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const res = await fetch("/engagements", {
+      method: "POST",
+      headers: {
+        "Content-Type": 'application/json'
+      },
+      body: JSON.stringify({
+        id: engage.id,
+        fullname: engage.fullname,
+        email: engage.email,
+        comment: engage.comment
+      })
+    })
+
+    const data = await res.json()
+    setEngage([...engage, data])
+  }
+
+
+
+
+
   return (
     <div className='contact-page'>
 
@@ -35,6 +75,7 @@ export default function ContactPage() {
                       <FaPhone/>
                     </i>
                   </div>
+
                   <div className='contact-text'>
                     <h5>Contact Us</h5>
                     <p>+25471234565</p>
@@ -58,16 +99,27 @@ export default function ContactPage() {
 
           <div className='contact-column'>
             <div className='contact-form'>
-              <form action="#">
+              <form onSubmit={handleSubmit}>
                 <input 
                   type="text" 
-                  placeholder='Name'
+                  placeholder='fullname'
+                  name="fullname"
+                  value={engage.fullname}
+                  onChange={handleChange}
                 />
                 <input 
                   type="email" 
                   placeholder='Email'
+                  name ="email"
+                  value={engage.email}
+                  onChange={handleChange}
                 />
-                <textarea placeholder='Comment'></textarea>
+                <textarea 
+                  placeholder='Comment'
+                  name="comment"
+                  value={engage.comment}
+                  onChange={handleChange}
+                />
                 <button className='contact-site-btn'>SEND MESSAGE</button>
               </form>
             </div>
