@@ -25,6 +25,7 @@ import HomePage from './pages/HomePage'
 import SignupPage from './pages/SignupPage'
 import LoginPage from './pages/LoginPage'
 import Footer from './components/Footer'
+import ErrorPage from "./pages/ErrorPage";
 
 //services
 import Event from './components/Event'
@@ -67,6 +68,7 @@ function App() {
       <Route path="/footer" element={<Footer/>} />
       {/* <Route path="/admin/newevents" element={<NewEvents/>} /> */}
       <Route path="/services" element={<Event/>} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>
   )
