@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.services-page
+{
+  background:#333;
+}
+
+#header{
+  color:  rgba(255, 189, 29, 0.7);
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+#content-box{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#carde{
+  height: auto;
+  width:25vw;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #ebebeb; 
+  margin: 12px 6px;
+  box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#carde img{
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+#carde img:hover {
+  box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
+  filter: grayscale(100%);
+}
+
+#carde h2{
+  margin-bottom: 12px;
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
+}
+
+#carde p{
+  color: #127bd8;
+  text-align: center;
+  font-size: 22px;
+  min-height: 10px;
+}
+
+#carde:hover p{
+  color: gray;
+  font-weight: 600;
+}
+#carde:hover h2{
+  font-weight: 900;
+}
+
+
+#carde ul
+{
+  width: 80%;
+  padding: 10px;
+  margin: 0 10%;
+}
+
+#carde ul li
+{
+  color: rgb(19, 6, 6);
+  font-size: 20px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.services-buttons
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+}
+
+.service_button-book,
+.service_button-review
+{
+  width: 30%;
+  background-color: red;
+  height: 50%;
+  margin: 10%;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.service_button-book
+{
+  background-color: rgb(25, 63, 212);
+}
+
+
+.service_button-book:hover
+{
+  background-color: rgb(143, 212, 25);
+  color:rgb(19, 6, 6);
+}
+
+
+.service_button-review:hover
+{
+  background-color: blueviolet;
+}
+
+
+
+@media only screen and (max-width: 768px)
+{
+  #content-box
+  {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #carde
+  {
+    width: 100%;
+  }
+
+  #carde img{
+    width: 50%;
+    height: 250px;
+  }
+
+}
+
+@media only screen and (max-width: 992px)
+
+{
+  #content-box
+  {
+    display: inline-block;
+    /* margin-left: 100px; */
+  }
+
+  #carde
+  {
+    width: 100%;
+    height: auto;
+  }
+
+  #carde img{
+    width: 60%;
+    height: 350px;
+  }
+
+}

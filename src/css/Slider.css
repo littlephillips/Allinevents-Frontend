@@ -16,6 +16,7 @@
   
   .slider__image {
     width: 60%;
+    height: auto;
   }
 
   .slider__content {
