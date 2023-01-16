@@ -1,110 +1,310 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { NavLink } from 'react-router-dom'
-import {AiOutlineMenu, AiOutlineClose, AiFillPlusCircle, AiFillDelete} from "react-icons/ai"
-import {FaQuestionCircle, FaUserFriends} from "react-icons/fa"
-// import {HiMenu} from "react-router/hi"
+import AdminCreateForm from '../components/AdminCreateForm';
+// import ProfilePage from './ProfilePage';
 
 function Admin() {
-    const [show, setShow] = useState(false)
-    const [showNav, setShowNav] = useState(false)
-    const [event, setEvent] = useState({
-        name:'',
-        description:'',
-        services:'',
-        image: null
-    })
-    function handleChange(e){
-        e.preventDefault();
+    const [bookings, setBookings] = useState([]);
+    const [engagements, setEngagements] = useState([]);
+    const [create, setCreateForm] = useState(false)
+    // const [profile, setProfile] = useState(false)
 
-        const { value, name} = e.currentTarget;
-
-        setEvent({
-            ...event,
-            [name]: value
-        });
+    const toggleCreateForm = () => {
+        setCreateForm(!create)
     }
 
-    const handleSubmit =  async (e) => {
-        e.preventDefault()
-        console.log(event)
-        const res = await fetch("http://localhost:3000/events", {
-            method: "POST",
-            headers: {
-                "Content-type": 'application/json'
-            },
-            body: JSON.stringify ({
-                id: event.id,
-                name: event.name,
-                description: event.description,
-                services: event.services,
-                image: event.image
-            })
-        })
+    // const toggleModal = () => {
+    //     setProfile(!profile)
+    // }
 
-        const data = await res.json()
-        setEvent([...event, data])
-        console.log(event)
-    }       
+
+
+    useEffect(() => {
+        fetch("/bookings")
+        .then((res) => res.json())
+        .then((data) => setBookings(data))
+    }, []);
+
+
+    useEffect(() => {
+        fetch("/engagements")
+        .then((res) => res.json())
+        .then((data) => setEngagements(data))
+    }, []);
+
+
+    const removeBooking = (id) => {
+            fetch(`/bookings/${id}`,
+                {
+                    method: 'DELETE',
+                    headers: {
+                        'Accept': 'application/json',
+                        'content-Type': 'application/json'
+                    }
+                })
+
+                .then(console.log("Deleted"))
+                .catch(err => console.log(err));
+            };
+
+            const removeEngagement = (id) => {
+                fetch(`/engagements/${id}`,
+                    {
+                        method: 'DELETE',
+                        headers: {
+                            'Accept': 'application/json',
+                            'content-Type': 'application/json'
+                        }
+                    })
+
+                    .then(console.log("Deleted"))
+                    .catch(err => console.log(err));
+                };
+
+    // window.console.dir(engagements)
 
     return (
-        <div className='w-full h-screen'>
-            <div className='w-full h-full px-4 py-8 relative'>
-                {showNav ?  <AiOutlineClose onClick={() =>setShowNav(!showNav)} className='text-white z-20 absolute left-8 text-2xl top-8 cursor-pointer font-bold'/> : <AiOutlineMenu onClick={() => setShowNav(true)} className='text-black text-2xl cursor-pointer' /> }
+        <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+                <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+                    <header class="bg-surface-primary border-bottom pt-6">
+                    <div class="container-fluid">
+                        <div class="mb-npx">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6 col-12 mb-4 mb-sm-0">
 
-                {/* <button  className='py-1 mt-10 px-2 border border-yellow-400 rounded-full'>create an event</button> */}
-                <div className={showNav ? 'w-[400px] transition text-white absolute left-0 top-0 h-full bg-[#233d4d]' : 'w-[400px] text-white absolute left-[100%] top-0 h-full bg-blue-800'}>
-                    <div className='w-full  h-full relative flex flex-col justify-center pl-10 relative'>
+                                    {/* <h1 class="h2 mb-0 ls-tight">AllInEvents</h1> */}
+                                </div>
+                                <div class="h-2/3">
+{/* 
+                                    <div class="mx-n1">
+                                        <NavLink
+                                        onClick={toggleModal}
+                                        class="flex btn-sm btn-neutral border-base mx-1">
+                                            {profile && (
+                                            <ProfilePage />
+                                            )}
+                                            <div className='p-2'>
+                                                <span class=" pe-2">
+                                                    <i class="bi bi-people"></i>
+                                                </span>
+                                                <span class=" pe-4" >Profile</span>
+                                                <button onClick={toggleModal}
+                                                >Edit Profile</button>
+                                            </div>
+                                        </NavLink>
+                                        <NavLink href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
+                                            <span class=" pe-1">
+                                                <i class="bi bi-logout"></i>
+                                            </span>
+                                            <span>Logout</span>
+                                        </NavLink>
+                                    </div> */}
 
-                        {/* <NavLink className='my-4 text-xl font-bold flex items-center'>< AiFillHome/>About</NavLink> */}
-                        <NavLink onClick={() => setShow(!show)} className='my-4 text-xl font-bold flex items-center'><AiFillPlusCircle className='mr-4'/>Event</NavLink>
-                        <NavLink  to="/profile" className='my-4 text-xl font-bold flex items-center'>< FaUserFriends className='mr-4'/>Profile</NavLink>
+                                    
+                                </div>
+                            </div>
 
-                        {/* <NavLink className='my-4 text-xl font-bold flex items-center'>BookEvent</NavLink> */}
-                        <NavLink className='my-4 text-xl font-bold flex items-center'>< AiFillDelete className='mr-4'/>Delete</NavLink>
-                        {/* <NavLink className='my-4 text-xl font-bold flex items-center'>Contact</NavLink> */}
-                        <NavLink className='my-4 text-xl font-bold flex items-center'><FaQuestionCircle className='mr-4'/>Logout</NavLink>
+                            <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                                <li class="nav-item ">
+                                    <NavLink
+                                    onClick={toggleCreateForm}
+                                    class="nav-link active">Create Event</NavLink>
+                                    {create && (
+                                        <AdminCreateForm />
+                                    )}
+                                </li>
+                                <li class="nav-item">
+                                    <NavLink to="#" class="nav-link font-regular">Update Event</NavLink>
+                                </li>
+                                <li class="nav-item">
+                                    <NavLink to="#" class="nav-link font-regular">Delete Event</NavLink>
+                                </li>
+                                <br/> <br/>
+                                <li class="nav-item" >
+                                    <NavLink to="#" class="nav-link font-regular ">logout</NavLink>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+        {/* create form */}
+
+         {/* dashboard */}
+
+        <main class="py-6 bg-surface-secondary">
+                    <div class="container-fluid">
+                        <div class="row g-6 mb-6">
+                        <div class="col-xl-4  col-13">
+                            <div class="card shadow border-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">AllIn Budget</span>
+                                            <span class="h3 font-bold mb-0">$50000.90</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
+                                                <i class="bi bi-credit-card"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 mb-0 text-sm">
+                                        <span class="badge badge-pill bg-soft-success text-success me-2">
+                                            <i class="bi bi-arrow-up me-1"></i>24%
+                                        </span>
+                                        <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4  col-13">
+                            <div class="card shadow border-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Page Visit</span>
+                                            <span class="h3 font-bold mb-0">215</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-primary text-white text-lg rounded-circle">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 mb-0 text-sm">
+                                        <span class="badge badge-pill bg-soft-success text-success me-2">
+                                            <i class="bi bi-arrow-up me-1"></i>30%
+                                        </span>
+                                        <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    <div class="col-xl-4 col-13">
+                            <div class="card shadow border-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Motivation </span>
+                                            <span class="h3 font-bold mb-0">95%</span>
+                                        </div>
+                                        <div class="col-auto">
+                                        <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                        <i class="bi bi-minecart-loaded"></i>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 mb-0 text-sm">
+                                        <span class="badge badge-pill bg-soft-success text-success me-2">
+                                            <i class="bi bi-arrow-up me-1"></i>10%
+                                        </span>
+                                        <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
-                <div className='w-full mt-6'>
-                    {/* <p className='text-center'>create an event</p> */}
-                    {show   && 
-                    <form onSubmit={handleSubmit} className='w-[50%] mx-auto flex flex-col p-4'>
-                        <input 
-                            className='border border-black py-3 px-2 my-2 w-full'
-                            type="text" name="name" id="name" 
-                            placeholder='event name'
-                            value={event.name}
-                            onChange={handleChange}
-                        />
 
-                        <input 
-                            className='border border-black py-4 px-2 my-2 w-full' 
-                            type="textarea" name="description" id="description" placeholder='description' 
-                            value={event.description}
-                            onChange={handleChange}
-                        />
+        {/* bookings*/}
+                            <div class="card-header" >
+                            <h5 class="mb-0">AllInEvents Current Bookings</h5>
+                            </div>
+                        <div class="table-responsive">
 
-                        <input 
-                            className='border border-black py-4 px-2 my-2 w-full' 
-                            type="text" name="services" id="services" 
-                            placeholder='Enter servies offered seperated by comas(,)' 
-                            value={event.services}
-                            onChange={handleChange}
-                        />
+                        <table class="table table-hover table-nowrap">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Event Name</th>
+                                    <th scope="col">Event Date</th>
+                                    <th scope="col">Client Name</th>
+                                    <th scope="col">Client Email</th>
+                                    <th scope="col">Client Phone</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
 
-                        <input type="file" name="image" id="image" 
-                            onChange={handleChange}
-                        />
+                            <tbody>
+                                {
+                                    (bookings.length > 0)  ?
+                                    bookings && bookings.map((booking, id) => {
+                                        return (
+                                            <tr key={id}>
+                                                <td>📊 {booking.eventname}  </td>
+                                                <td>📅 {booking.eventdate}</td>
+                                                <td>🧑 {booking.fullname}</td>
+                                                <td>💌 {booking.email}</td>
+                                                <td>📞  {booking.phonenumber}   </td>
+                                                <td class="text-center">
+                                                <button type="button" onClick={() => removeBooking(booking.id)} class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                                    <i class="bi bi-trash" ></i>
+                                                </button>
+                                                </td>
+                                            </tr>
+                                        );
+                                    }) : <h1
+                                    style={
+                                        {color: "red",
+                                        fontWeight: "400",
+                                        width: "100%" }
+                                        }> No Available Bookings, consider more marketing!! </h1> }
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
 
-                        <button className='bg-yellow-300 my-3 p-2'>submit</button>
-                    </form>
-                    }
-                </div>
+        {/* engagements */}
+                        <div class="card-header">
+                        <h5 class="mb-0">AllInEvents Engagements</h5>
+                        </div>
+
+                        <div class="table-responsive">
+                        <table class="table table-hover table-nowrap">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Client Name</th>
+                                    <th scope="col">Client Email</th>
+                                    <th scope="col">Comment</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {
+                                    (engagements.length > 0)  ?
+                                    engagements && engagements.map((engagement, id) => {
+                                        return (
+                                            <tr key={id}>
+                                                <td>🧑  {engagement.fullname} </td>
+                                                <td>💌  {engagement.email} </td>
+                                                <td>💬  {engagement.comment}</td>
+                                                <td class="text-center">
+                                                <button type="button" onClick={() => removeEngagement(engagement.id)} class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                                    <i class="bi bi-trash" ></i>
+                                                </button>
+                                                </td>
+                                            </tr>     
+                                        );
+                                    }) : <h1
+                                    style={
+                                        {color: "green",
+                                        fontWeight: "600",
+                                        width: "100%",
+                                        marginLeft: "10px",
+                                        padding: "10px"}
+                                        }> No Engagements yet!! </h1> }
+                            </tbody>
+                        </table>
+                        </div>
+                </main>
             </div>
         </div>
+            )
+        }
 
-    )
-}
-
-export default Admin    
+        export default Admin

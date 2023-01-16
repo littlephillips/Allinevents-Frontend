@@ -8,12 +8,7 @@ import AboutPage from './pages/AboutPage'
 import AdminPage from './pages/AdminPage'
 import BookingsPage from './pages/BookingsPage'
 import ContactPage from './pages/ContactPage'
-//import ServicePage from './pages/ServicePage'
 import ProfilePage from "./pages/ProfilePage";
-
-
-//Admin
-// import NewEvents from './components/NewEvents'
 
 //landing page
 import Hero from "./pages/Hero";
@@ -51,7 +46,8 @@ function App() {
                 title={"Celebrate Affordably."}
                 subtitle={"You dont have to break the bank to get your dream wedding...."}
                 flipped={true}r
-               />
+              />
+              <Footer/>
               </>
             }
           />
@@ -62,11 +58,9 @@ function App() {
       <Route path="/booking" element={<BookingsPage />} />
       <Route path="/login" element={<LoginPage/>} />
       <Route path="/reviews" element={<ReviewsPage/>} />
-{/*<Route path="/services" element={<ServicePage/>} />*/}
       <Route path="/profile" element={<ProfilePage/>} />
       <Route path="/signup" element={<SignupPage/>} />
       <Route path="/footer" element={<Footer/>} />
-      {/* <Route path="/admin/newevents" element={<NewEvents/>} /> */}
       <Route path="/services" element={<Event/>} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>

@@ -32,7 +32,7 @@ function LoginForm() {
         res.json().then((user) => {
           notifyUser();
           localStorage.setItem("jwt", user.jwt);
-          localStorage.setItem("user", `${user.user.id}`);
+          localStorage.setItem("user", `${user.user_id}`);
         });
       } else {
         res.json().then((error) => setError(error));
@@ -87,7 +87,7 @@ function LoginForm() {
               class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
               name="password"
               type="password" 
-              placeholder="********" 
+              placeholder="*****" 
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
