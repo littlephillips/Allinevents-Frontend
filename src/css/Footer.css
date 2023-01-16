@@ -1,0 +1,28 @@
+.main-footer {
+    color: white;
+    background-color: hsl(42, 82%, 63%);
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .isir {
+    left: 80%;
+    color:  rgba(37, 150, 190, 1);
+    size: 120px;
+  }
+
+  h4{ 
+    font-style: italic;
+    color: rgba(37, 150, 190, 1);
+  }
+  
+  .list-unstyled {
+    font-size: 20px;
+    color: white;
+  }
+  .col-sm{
+    justify-content: center;
+  }

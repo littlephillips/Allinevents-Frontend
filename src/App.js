@@ -47,11 +47,11 @@ function App() {
                 }
               />
               <Slider
-                imageSrc={"https://cdn0.weddingwire.com/vendor/207389/original/960/jpg/1532957174-c608e41811a57ce6-1532957171-2f3f575b32371e33-1532957146191-16-2730EB80-C48A-442.webp"}
+                imageSrc={"https://media.istockphoto.com/id/496971209/photo/the-begining-of-forever.jpg?s=612x612&w=0&k=20&c=J7uidujGk1TMNiSIMMvxyIWsVE5Pzhyvb3upPLeank0="}
                 title={"Celebrate Affordably."}
                 subtitle={"You dont have to break the bank to get your dream wedding...."}
-                flipped={true}
-              />
+                flipped={true}r
+               />
               </>
             }
           />
