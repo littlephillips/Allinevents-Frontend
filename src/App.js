@@ -51,6 +51,7 @@ function App() {
                 subtitle={"You dont have to break the bank to get your dream wedding...."}
                 flipped={true}
                />
+               <Footer />
               </>
             }
           />
