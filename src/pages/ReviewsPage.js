@@ -10,7 +10,7 @@ function Reviews() {
         const [reviews, setReviews] = useState([]);
 
         useEffect(() => {
-            fetch("/comments")
+            fetch('/comments')
                 .then(response => response.json())
                 .then(reviews => setReviews(reviews))
 

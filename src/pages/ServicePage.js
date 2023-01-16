@@ -20,14 +20,12 @@ function ServicePage({services}) {
                 <li>{services.services}</li>
               </ul>
               <div className='services-buttons'>
-              {/* <button className="service_button-book">
+              <button className="service_button-book">
                 <NavLink to="/booking">Book</NavLink>
               </button>
               <button className="service_button-review">
                 <NavLink to="/reviews">Review</NavLink>
-              </button> */}
-              <NavLink className="service_button-book" to= {"/booking"}>Book</NavLink>
-              <NavLink className="service_button-review" to= {"/reviews"}>Review</NavLink>
+              </button>
           </div>
             
           </div>

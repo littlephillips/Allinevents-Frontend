@@ -30,7 +30,6 @@ import ErrorPage from "./pages/ErrorPage";
 //services
 import Event from './components/Event'
 import ReviewsPage from './pages/ReviewsPage'
-import Button from "./components/Button";
 
 function App() {
   return(
@@ -70,7 +69,6 @@ function App() {
       {/* <Route path="/admin/newevents" element={<NewEvents/>} /> */}
       <Route path="/services" element={<Event/>} />
       <Route path="*" element={<ErrorPage />} />
-      <Route path="button" element ={<Button/>}/>
     </Routes>
   </BrowserRouter>
   )
