@@ -23,15 +23,16 @@ body {
 
 #content-box{
   display: flex;
+  position: absolute;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 100%;
+  width: 80%;
   margin-top: 30px;
 }
 
 #carde{
   height: auto;
-  width:25vw;
+  width: 100vw;
   padding: 30px;
   border-radius: 5px;
   background-color: #ebebeb; 

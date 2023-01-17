@@ -5,10 +5,10 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav
 `
-background: rgba(255, 189, 29, 0.7);
+background: #FFD23F;
 height: 70px;
 display: flex;
-justify-content: Right;
+justify-content: space-between;
 z-index: 12;
 `;
 
