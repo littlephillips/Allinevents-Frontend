@@ -13,8 +13,9 @@ return (
 	<>
 	<Nav>
 		<Bars />
-	<NavMenu>
-		<NavLink to='/' >  AllInEvents </NavLink>
+	<NavMenu style={{display: "d-flex", justifyContent: 
+	"center"}}>
+		<NavLink className="flex 1" to='/' >  AllInEvents </NavLink>
 		<NavLink to='/services'> Services </NavLink>
 		<NavLink to='/contact' >Contact</NavLink>
 	</NavMenu>

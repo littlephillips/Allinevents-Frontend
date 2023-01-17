@@ -9,6 +9,7 @@ import AdminPage from './pages/AdminPage'
 import BookingsPage from './pages/BookingsPage'
 import ContactPage from './pages/ContactPage'
 import ProfilePage from "./pages/ProfilePage";
+// import ServicePage from "./pages/ServicePage";
 
 //landing page
 import Hero from "./pages/Hero";
