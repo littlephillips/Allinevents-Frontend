@@ -7,7 +7,7 @@ const ServicePage = ({services}) =>{
 //       style=  {{ background: "url('https://wallpapercave.com/wp/wp6689710.jpg')"}}> 
    return(
     <>
-    <div class="flex flex-col items-center justify-center w-screen ">
+    <div class="z-40 flex flex-col items-center justify-center w-screen">
     {/* <div class="absolute flex items-center justify-center w-full bg-gray-900 bg-opacity-75"></div> */}
 
     {services.map((services) => (
@@ -20,7 +20,7 @@ const ServicePage = ({services}) =>{
     <div
         class="relative flex flex-col justify-between h-screen">
             <div
-                class="relative my-6 px-8 ">
+                class="relative sm:flex my-6 px-8 ">
                     <div 
                         class="border-b-4 border-gray-400 px-20 py-5 mx-2 absolute ">
                         <h1 class="italic text-white text-2xl md:text-4xl lg:text-6xl uppercase text-center font-semibold">{services.eventname}</h1>
