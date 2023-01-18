@@ -1,21 +1,27 @@
 import React, {useEffect, useState} from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import AdminCreateForm from '../components/AdminCreateForm';
-// import ProfilePage from './ProfilePage';
+import ProfilePage from './ProfilePage';
 
-function Admin() {
+
+
+
+
+function AdminDashboard({toggleModal}) {
     const [bookings, setBookings] = useState([]);
     const [engagements, setEngagements] = useState([]);
     const [create, setCreateForm] = useState(false)
-    // const [profile, setProfile] = useState(false)
+    const [profile, setProfile] = useState(false)
+
+    
 
     const toggleCreateForm = () => {
         setCreateForm(!create)
     }
 
-    // const toggleModal = () => {
-    //     setProfile(!profile)
-    // }
+    const toggleProfilePage = () => {
+        setProfile(!profile)
+    }
 
 
 
@@ -56,11 +62,11 @@ function Admin() {
                             'content-Type': 'application/json'
                         }
                     })
-
+    
                     .then(console.log("Deleted"))
                     .catch(err => console.log(err));
                 };
-
+    
     // window.console.dir(engagements)
 
     return (
@@ -71,14 +77,13 @@ function Admin() {
                         <div class="mb-npx">
                             <div class="row align-items-center">
                                 <div class="col-sm-6 col-12 mb-4 mb-sm-0">
-
+                            
                                     {/* <h1 class="h2 mb-0 ls-tight">AllInEvents</h1> */}
                                 </div>
                                 <div class="h-2/3">
-{/* 
                                     <div class="mx-n1">
-                                        <NavLink
-                                        onClick={toggleModal}
+                                        <NavLink 
+                                        onClick={toggleProfilePage}
                                         class="flex btn-sm btn-neutral border-base mx-1">
                                             {profile && (
                                             <ProfilePage />
@@ -88,25 +93,26 @@ function Admin() {
                                                     <i class="bi bi-people"></i>
                                                 </span>
                                                 <span class=" pe-4" >Profile</span>
-                                                <button onClick={toggleModal}
-                                                >Edit Profile</button>
+                        
+                                                <Link to='/dashboard/edit' onClick={toggleModal} >Edit Profile</Link>
+                                                {/* <button onClick={toggleModal}
+                                                >Edit Profile</button> */}
                                             </div>
+                                                                            
                                         </NavLink>
+        
                                         <NavLink href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
                                             <span class=" pe-1">
                                                 <i class="bi bi-logout"></i>
                                             </span>
                                             <span>Logout</span>
                                         </NavLink>
-                                    </div> */}
-
-                                    
+                                    </div>
                                 </div>
                             </div>
-
                             <ul class="nav nav-tabs mt-4 overflow-x border-0">
                                 <li class="nav-item ">
-                                    <NavLink
+                                    <NavLink 
                                     onClick={toggleCreateForm}
                                     class="nav-link active">Create Event</NavLink>
                                     {create && (
@@ -119,21 +125,17 @@ function Admin() {
                                 <li class="nav-item">
                                     <NavLink to="#" class="nav-link font-regular">Delete Event</NavLink>
                                 </li>
-                                <br/> <br/>
-                                <li class="nav-item" >
-                                    <NavLink to="#" class="nav-link font-regular ">logout</NavLink>
-                                </li>
                             </ul>
                         </div>
                     </div>
                 </header>
-
+        
         {/* create form */}
-
-         {/* dashboard */}
-
-        <main class="py-6 bg-surface-secondary">
-                    <div class="container-fluid">
+        
+        {/* dashboard */}
+        
+                <main class="py-6 bg-surface-secondary">
+                    <div class="container-fluid">                
                         <div class="row g-6 mb-6">
                         <div class="col-xl-4  col-13">
                             <div class="card shadow border-0">
@@ -142,7 +144,7 @@ function Admin() {
                                         <div class="col">
                                             <span class="h6 font-semibold text-muted text-sm d-block mb-2">AllIn Budget</span>
                                             <span class="h3 font-bold mb-0">$50000.90</span>
-                                        </div>
+                                        </div>                                
                                         <div class="col-auto">
                                             <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
                                                 <i class="bi bi-credit-card"></i>
@@ -158,7 +160,7 @@ function Admin() {
                                 </div>
                             </div>
                         </div>
-
+        
                         <div class="col-xl-4  col-13">
                             <div class="card shadow border-0">
                                 <div class="card-body">
@@ -182,9 +184,9 @@ function Admin() {
                                 </div>
                             </div>
                         </div>
-
-
-
+        
+        
+        
                     <div class="col-xl-4 col-13">
                             <div class="card shadow border-0">
                                 <div class="card-body">
@@ -209,27 +211,27 @@ function Admin() {
                             </div>
                         </div>
                     </div>
-
-
+        
+        
         {/* bookings*/}
                             <div class="card-header" >
                             <h5 class="mb-0">AllInEvents Current Bookings</h5>
                             </div>
                         <div class="table-responsive">
-
+                        
                         <table class="table table-hover table-nowrap">
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">Event Name</th>
                                     <th scope="col">Event Date</th>
                                     <th scope="col">Client Name</th>
-                                    <th scope="col">Client Email</th>
+                                    <th scope="col">Client Email</th>                         
                                     <th scope="col">Client Phone</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
-
-                            <tbody>
+        
+                            <tbody>                        
                                 {
                                     (bookings.length > 0)  ?
                                     bookings && bookings.map((booking, id) => {
@@ -245,11 +247,11 @@ function Admin() {
                                                     <i class="bi bi-trash" ></i>
                                                 </button>
                                                 </td>
-                                            </tr>
+                                            </tr>     
                                         );
-                                    }) : <h1
+                                    }) : <h1 
                                     style={
-                                        {color: "red",
+                                        {color: "red", 
                                         fontWeight: "400",
                                         width: "100%" }
                                         }> No Available Bookings, consider more marketing!! </h1> }
@@ -257,13 +259,13 @@ function Admin() {
                         </table>
                         </div>
                     </div>
-
+        
         {/* engagements */}
                         <div class="card-header">
                         <h5 class="mb-0">AllInEvents Engagements</h5>
                         </div>
-
-                        <div class="table-responsive">
+        
+                        <div class="table-responsive">                
                         <table class="table table-hover table-nowrap">
                             <thead class="thead-light">
                                 <tr>
@@ -273,7 +275,7 @@ function Admin() {
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
-
+        
                             <tbody>
                                 {
                                     (engagements.length > 0)  ?
@@ -290,12 +292,12 @@ function Admin() {
                                                 </td>
                                             </tr>     
                                         );
-                                    }) : <h1
+                                    }) : <h1 
                                     style={
-                                        {color: "green",
+                                        {color: "green", 
                                         fontWeight: "600",
-                                        width: "100%",
-                                        marginLeft: "10px",
+                                        width: "100%", 
+                                        marginLeft: "10px", 
                                         padding: "10px"}
                                         }> No Engagements yet!! </h1> }
                             </tbody>
@@ -306,5 +308,5 @@ function Admin() {
         </div>
             )
         }
-
-        export default Admin
+        
+        export default AdminDashboard
