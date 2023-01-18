@@ -10,22 +10,27 @@ NavBtnLink,
 
 const Navbar = () => {
 return (
-	<>
-	<Nav>
-		<Bars />
-	<NavMenu style={{display: "d-flex", justifyContent: 
-	"center"}}>
-		<NavLink className="flex 1" to='/' >  AllInEvents </NavLink>
-		<NavLink to='/services'> Services </NavLink>
-		<NavLink to='/contact' >Contact</NavLink>
-	</NavMenu>
+	<div
+	style={{backgroundImage: `url('public/img/bg-nav.png')')`}}>
+	<NavMenu className='box-border m-auto '>
+		<div class="flex items-center space-x-4 justify-between ">
+			<NavLink className="flex" to='/' >AllInEvents </NavLink>
+			{/* <Bars /> */}
+			<div class=" flex flex-row items-center">
+				<NavLink className="" to='/services'>Services</NavLink>
+				
+			</div>
+			<NavLink to='/contact' >Contact</NavLink>
+		</div>
+		
+		
 
 
-	<NavBtn>
+	{/* <NavBtn>
 		<NavBtnLink to='/login'>Admin</NavBtnLink>
-	</NavBtn>
-	</Nav>
-	</>
+	</NavBtn> */}
+	</NavMenu>
+	</div>
 );
 };
 
