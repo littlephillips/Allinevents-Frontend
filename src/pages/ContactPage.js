@@ -1,15 +1,24 @@
 import React, {useState} from "react";
 import { FaMapMarkerAlt,FaPhone, FaMailBulk} from "react-icons/fa";
+
 import '../css/contact.css'
+import  "../css/notification.css"
 
 
 
 export default function ContactPage() {
+
+const [notification, setNotification] = useState(false)
 const [engage, setEngage] = useState({
   fullname:"",
   email: "",
   comment:""
 })
+
+function notifyUser(){
+  setNotification((notification) => !notification);
+  setTimeout(endNotification, 1000)
+}
 
 function handleChange(e){
   e.preventDefault()
@@ -38,12 +47,18 @@ function handleChange(e){
       })
     })
 
-    const data = await res.json()
-    setEngage([...engage, data])
+    await res.json()
+    notifyUser();
+    setEngage({
+      fullname:"",
+      email: "",
+      comment:""
+    })
   }
 
-
-
+  function endNotification() {
+    setNotification((notification) => !notification)
+  }
 
 
   return (
@@ -72,7 +87,7 @@ function handleChange(e){
 
                 <div className='contact-widget-item'>
                   <div className='contact-icon'>
-                    <i className='fa-phone'>
+                    <i className='faphone'>
                       <FaPhone/>
                     </i>
                   </div>
@@ -99,6 +114,16 @@ function handleChange(e){
           </div>
 
           <div className='contact-column'>
+
+
+            {notification? (
+              <div className='bookings-notification contact'>
+                <p className="bookings-success">
+                Thank you for contacting us!
+                </p>
+              </div>
+            ) : null}   
+
             <div className='contact-form'>
               <form onSubmit={handleSubmit}>
                 <input 

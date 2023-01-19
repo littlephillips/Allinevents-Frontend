@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 
+import  "../css/notification.css"
+
 function SignupPage() {
 
   const navigate = useNavigate();
@@ -44,27 +46,34 @@ function SignupPage() {
   }
 
   return (
-    <div className='min-h-screen bg-slate flex flex-col items-center justify-center'>
-        <div class="w-full max-w-xs ">
+    <div className="bg-[url('https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1600')] bg-cover min-h-screen bg-slate flex flex-col items-center justify-center">
+        <div class="opacity-80 pw-full max-w-xs ">
 
-          {notification ? (
-            <p className='signup-success'>
-              signup successfull
-            </p>
-          ) : null }
+      {notification? (
+        <div className='bookings-notification'>
+          <p className="bookings-success">
+          signup successfull
+          </p>
+        </div>
+      ) : null}  
 
 
         <form onSubmit={handleSubmit}
         class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
-          {error ? 
-          <p className="error-signup">{error.errors}</p>
-          : null }
+            {error ? (
+              <div className='errors-notification'>
+                <p className="notification-errors">
+                  {error.errors}
+                </p>
+              </div>
+            ) : null}
+          
           <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            <label class="text-xl block text-gray-700 text-sm font-bold mb-2" for="username">
               Username
             </label>
             <input 
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+              class="text-xs font-bold shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
               name="username" 
               type="text" 
               required= "required"
@@ -75,11 +84,11 @@ function SignupPage() {
           </div>
           
           <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            <label class="text-xl block text-gray-700 font-bold mb-2" for="username">
               Email
             </label>
             <input 
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+              class="shadow text-xs font-bold appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
               name="Email" 
               required="required"
               autoComplete="off"
@@ -89,16 +98,8 @@ function SignupPage() {
             />
           </div>
 
-
-          {/* <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
-              Last Name
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastName" type="text" placeholder="Last Name" />
-          </div> */}
-
           <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            <label class="text-xl block text-gray-700 font-bold mb-2" for="password">
               Password
             </label>
             <input 
@@ -115,24 +116,14 @@ function SignupPage() {
             <p class="text-red-500 text-xs italic">Please choose a password.</p>
           </div>
 
-          {/* <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-              Password
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
-            <p class="text-red-500 text-xs italic">Confirm password.</p>
-          </div> */}
-
           <div class="flex items-center justify-between">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" 
-            type="submit">   Sign Up    </button>
-
-            {/* {error.map((error) => (
-              <p key={error}>{error}</p>
-            ))} */}
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit">
+              Sign In
+            </button>
 
             < NavLink to="/login"
-              class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" >              
+              class="inline-block flex-auto font-bold text-sm text-blue-500 hover:text-blue-800" >              
               Have an account?
             </NavLink>
 

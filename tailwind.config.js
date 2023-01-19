@@ -4,7 +4,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    theme: {
+    extend: {
       borderWidth: {
         DEFAULT: '1px',
         '0': '0',
@@ -13,7 +13,21 @@ module.exports = {
         '4': '16px',
         '6': '24px',
         '8': '32px',
-      }
+      },
+      screens: {
+        'sm': '576px',
+        // => @media (min-width: 576px) { ... }
+  
+        'md': '960px',
+        // => @media (min-width: 960px) { ... }
+  
+        'lg': '1440px',
+        // => @media (min-width: 1440px) { ... }
+      },
+  },
+  fontFamily: {
+    primary: ["Playfair Display", "serif"],
+    secondary: ['Playfair Display', "serif"]
   },
   plugins: [],
 }
