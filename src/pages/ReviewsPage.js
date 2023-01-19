@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
+import Footer from '../components/Footer';
 import ReviewCard from '../components/ReviewCard'
 import ReviewForm from '../components/ReviewForm'
-import '../css/Reviews.css'
+// import '../css/Reviews.css'
 
 
 
@@ -21,15 +22,14 @@ function Reviews() {
         }
 
         return (
-            <div className='review-container'>
-                <div className='reviews-items'>
-                    <h1>Customers Reviews...</h1>
-                    {reviews.map((review) => (
+            <div className='h-screen flex flex-col w-screen sm:flex items-center justify-center  opacity-[90%] p-4 rounded-sm shadow-sm bg-[#f4f49f] dark:bg-gray-800 dark:text-gray-50'>
+                <ReviewForm handleNewReview = {handleNewReview} reviews={reviews}/>
+                    {/* {reviews.map((review) => (
                         <ReviewCard key = {review.id} review = {review} />)
-                    )}
-                    <ReviewForm handleNewReview = {handleNewReview} reviews={reviews}/>
-                </div>
+                    )} */}
             </div>
+            
+            // </div>
         
         );
 }
