@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+
+:root{
+  font-size: 0.8vw;
+  --primary-font-family: 'Poppins', sans-serif;
+  --secondary-font-family: 'Poppins', sans-serif;
+  /* --color-primary:#efe6d5; 
+  --color-secondary: #7B3F00; */
+}
+
+
 .slider {
     display: flex;
     align-items: center;

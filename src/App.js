@@ -3,8 +3,8 @@ import React from "react";
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
 
-//pages
-// import AboutPage from './pages/AboutPage'
+// pages
+import AboutPage from './pages/AboutPage'
 import AdminPage from './pages/AdminPage'
 import BookingsPage from './pages/BookingsPage'
 import ContactPage from './pages/ContactPage'
@@ -48,7 +48,7 @@ function App() {
                 subtitle={"You dont have to break the bank to get your dream wedding...."}
                 flipped={true}
               />
-              {/* <AboutPage /> */}
+              <AboutPage />
               <Footer/>
               </>
             }
