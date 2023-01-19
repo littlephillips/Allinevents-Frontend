@@ -10,12 +10,12 @@ function AboutPage() {
 
 <>
 <div class="shadow-sm min-h-min w-screen p-6 flex flex-col text-center bg-[#f1f1ef]">
-    <h1 className='font-primary p-2 text-4xl font-bold'>About Us</h1>
-    <p className='font-secondary text-md'>AllEvents is the one place stop for planning your dream celebrations.</p>
+    <h1 className='text-[#d7b031] font-primary p-2 text-4xl font-bold'>About Us</h1>
+    <p className='font-secondary text-md p-4'>Allin Events is the one place stop for planning your dream celebrations.</p>
     <hr />
     <br />
 
-    <h2 className='text-center font-bold font-primary p-4 shadow-sm '>Our Team</h2>
+    <h2 className='text-center font-semibold text-xl text-[#d7b031] font-primary p-4 shadow-sm '>Our Team</h2>
 
     <div className='flex p-2 space-x-3 justify-center'>
 
