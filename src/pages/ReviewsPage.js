@@ -22,7 +22,7 @@ function Reviews() {
         }
 
         return (
-            <div className='flex flex-col w-screen sm:flex items-center justify-center  opacity-[90%] p-4 rounded-sm shadow-sm bg-[#f4f49f] dark:bg-gray-800 dark:text-gray-50'>
+            <div className=' bg-white flex flex-col w-screen sm:flex items-center justify-center  opacity-[90%] p-4 rounded-sm shadow-sm dark:bg-gray-800 dark:text-gray-50'>
                     {reviews.map((review) => (
                         <ReviewCard key = {review.id} review = {review} />)
                     )}
