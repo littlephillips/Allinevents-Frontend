@@ -3,9 +3,11 @@ import { NavLink } from 'react-router-dom'
 
 // css
 import "../css/bookingspage.css"
+import  "../css/notification.css"
 
 function BookingsPage() {
 
+    const [notification, setNotification] = useState(false)
     const [userInfo, setUserInfo] = useState(
     {
         fullname: '',
@@ -14,6 +16,13 @@ function BookingsPage() {
         eventname: '',
         eventdate:''
     });
+
+    // NOTIFICATION
+    function notifyUser(){
+        setNotification((notification) => !notification);
+        setTimeout(endNotification, 1000)
+    }
+
 
     function onInputChange(event) {
         event.preventDefault();
@@ -27,9 +36,6 @@ function BookingsPage() {
         });
     }
     
-
-
-
 // handle form submission
 
 const handleSubmit = async (e) => {
@@ -50,9 +56,22 @@ const handleSubmit = async (e) => {
     })
     })
     
-    const data = await res.json()
-    setUserInfo([...userInfo, data])
+    await res.json()
+    notifyUser();    
+        
+        setUserInfo({
+            fullname: '',
+            phonenumber: '',
+            email: '',
+            eventname: '',
+            eventdate:''
+        })
     }
+
+    function endNotification() {
+        setNotification((notification) => !notification)
+    }
+    
 
 
 
@@ -78,17 +97,15 @@ const handleSubmit = async (e) => {
     }
 
 
-
     return (
 
         <div className="form_box">
             <h1>BOOK YOUR EVENT</h1>
-
             <form className="booking-form" onSubmit={handleSubmit}>
                 
                 <hr />
 
-            <h2> ✍  Your Details</h2>
+            <h2> 📝  Your Details</h2>
 
                 <input 
                     className="inner-form"
@@ -158,6 +175,13 @@ const handleSubmit = async (e) => {
                 </p>
 
                 <button className="booking-button" type="submit">Book Now</button>
+                    {notification? (
+                        <div className='bookings-notification'>
+                            <p className="bookings-success">
+                                booking successfull
+                            </p>
+                        </div>
+                    ) : null}    
             </form>
         </div>
                 
