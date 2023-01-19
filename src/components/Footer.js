@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () =>{
 
 return (
-    <footer class="p-4 lg:flex flex-col justify-between  bg-[#FFD23F] sm:p-6 dark:bg-gray-900">
+    <footer class="p-4 font-primary lg:flex flex-col justify-between  bg-[#FFD23F] sm:p-6 dark:bg-gray-900">
     <div class="md:flex md:justify-around">
         <div class="mb-6 md:mb-0">
             <Link to="/" class="flex ">

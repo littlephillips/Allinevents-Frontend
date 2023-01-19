@@ -47,10 +47,12 @@ function LoginForm() {
     navigate("/admin")
   }
 
+ 
+
 
   return (
-    <div className='min-h-screen flex flex-col items-center justify-center'>
-        <div class="w-full max-w-xs ">
+    <div className="font-bold bg-[url('https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1600')] bg-cover min-h-screen flex flex-col items-center justify-center">
+        <div class="w-full max-w-xs opacity-[80%]">
 
       {notification? (
         <div className='bookings-notification'>
@@ -72,11 +74,11 @@ function LoginForm() {
             ) : null}
 
           <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            <label class="block text-xl text-gray-700 font-bold mb-2" for="username">
               Username
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              class="font-bold font-secondary shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               name="username"
               type="text"
               placeholder="Username"
@@ -86,11 +88,11 @@ function LoginForm() {
           </div>
 
           <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            <label class="text-xl block text-gray-700  font-bold mb-2" for="password">
               Password
             </label>
             <input
-              class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              class="shadow appearance-none border font-bold border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               name="password"
               type="password"
               placeholder="*****"
