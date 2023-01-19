@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import Footer from '../components/Footer';
-import ReviewCard from '../components/ReviewCard'
+// import Footer from '../components/Footer';
+// import ReviewCard from '../components/ReviewCard'
 import ReviewForm from '../components/ReviewForm'
 // import '../css/Reviews.css'
 
