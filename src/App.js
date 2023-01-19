@@ -58,7 +58,7 @@ function App() {
       <Route path="/contact" element={<ContactPage/>} />
       <Route path="/booking" element={<BookingsPage />} />
       <Route path="/login" element={<LoginPage/>} />
-      <Route path="/review" element={<ReviewsPage/>} />
+      <Route path="/reviews" element={<ReviewsPage/>} />
       <Route path="/profile" element={<ProfilePage/>} />
       <Route path="/signup" element={<SignupPage/>} />
       <Route path="/footer" element={<Footer/>} />
