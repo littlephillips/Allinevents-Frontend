@@ -23,17 +23,17 @@ return(
             <div class="relative my-6 px-8 ">
                 <div 
                     class="border-b-4 bg-[#FFD23F] border-gray-800 px-20 py-3 mx-3 absolute font-semibold">
-                    <h1 class="italic text-[#2867f0] text-2xl md:text-4xl lg:text-6xl uppercase text-center font-bold">
+                    <h1 class="italic font-primary text-[#2867f0] text-2xl md:text-4xl lg:text-6xl uppercase text-center font-bold">
                         {services.eventname}
                     </h1>
                 </div>
             </div>
             <div class="h-screen p-6  w-screen flex flex-col justify-center items-center ">
                 <div class="p-6 rounded-sm shadow-md lg:flex flex-col justify-center items-center lg:w-2/4 lg:h-2/3 md:h-2/3 sm:h-[60%] bg-slate-800 bg-opacity-70">
-                    <p class="text-center text-white lg:text-3xl md:text-2xl sm:text-xl  mb-4 sm:p-2 ">
+                    <p class="text-center font-secondary text-white lg:text-3xl md:text-2xl sm:text-xl  mb-4 sm:p-2 ">
                         {services.description} 
                     </p>
-                    <p class="text-center text-white lg:text-3xl md:text-2xl sm:text-xl  mb-4 sm:p-2 ">
+                    <p class="text-center font-secondary text-white lg:text-3xl md:text-2xl sm:text-xl  mb-4 sm:p-2 ">
                         {services.services}
 {/* 
                         {services.services.map(
@@ -51,7 +51,7 @@ return(
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             <span>
-                                <NavLink to="/booking">Book</NavLink>
+                                <NavLink class="font-primary" to="/booking">Book</NavLink>
                                 {/* <NavLink  onClick={toggleBooking}>Book</NavLink>
                                 {booking && (
                                     <BookingsPage/>
@@ -62,7 +62,7 @@ return(
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24 " stroke="red">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <span><NavLink to="/reviews">Review</NavLink></span>
+                            <span><NavLink class="font-primary" to="/reviews">Review</NavLink></span>
                         </button>
                     </div>
                 </div>
