@@ -11,7 +11,8 @@ const Navbar = () => {
 return (
 	<>
 	<Nav>
-	<NavMenu style={{display: "d-flex", justifyContent: "center"}}>
+	<NavMenu className="font-primary ml-6" style={{display: "d-flex", justifyContent: "center"}}>
+		{/* <NavLink className="p-6" to='/' > All-in Events</NavLink> */}
 		<NavLink className="flex 1" to='/' > Home</NavLink>
 		<NavLink to='/services'> Services </NavLink>
 		<NavLink to='/contact' >Contact</NavLink>
@@ -19,7 +20,7 @@ return (
 
 
 	<NavBtn>
-		<NavBtnLink to='/login'>Admin</NavBtnLink>
+		<NavBtnLink className="font-secondary" to='/login'>Admin</NavBtnLink>
 	</NavBtn>
 	</Nav>
 	</>

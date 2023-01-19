@@ -6,6 +6,8 @@
     opacity: 0;
     transform: scale(85%);
     transition: 2s;
+    padding-bottom: 30px;
+
   }
   
   .slider--zoom {
@@ -17,6 +19,8 @@
   .slider__image {
     width: 60%;
     height: auto;
+    padding-bottom: 30px;
+
   }
 
   .slider__content {

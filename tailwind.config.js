@@ -4,7 +4,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    theme: {
+    extend: {
       borderWidth: {
         DEFAULT: '1px',
         '0': '0',
@@ -24,6 +24,10 @@ module.exports = {
         'lg': '1440px',
         // => @media (min-width: 1440px) { ... }
       },
+  },
+  fontFamily: {
+    primary: ["Playfair Display", "serif"],
+    secondary: ['Playfair Display', "serif"]
   },
   plugins: [],
 }
