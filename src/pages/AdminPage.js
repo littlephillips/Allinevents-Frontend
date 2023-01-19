@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import AdminCreateForm from '../components/AdminCreateForm';
+
 // import ProfilePage from './ProfilePage';
 
 function Admin() {
+    const navigate = useNavigate();
     const [bookings, setBookings] = useState([]);
     const [engagements, setEngagements] = useState([]);
     const [create, setCreateForm] = useState(false)
@@ -69,38 +71,20 @@ function Admin() {
                     <header class="bg-surface-primary border-bottom pt-6">
                     <div class="container-fluid">
                         <div class="mb-npx">
+
                             <div class="row align-items-center">
                                 <div class="col-sm-6 col-12 mb-4 mb-sm-0">
-
-                                    {/* <h1 class="h2 mb-0 ls-tight">AllInEvents</h1> */}
+                                    <h1 class="h2 mb-0 ls-tight text-primary">Welcome ...</h1>
                                 </div>
                                 <div class="h-2/3">
-{/* 
-                                    <div class="mx-n1">
-                                        <NavLink
-                                        onClick={toggleModal}
-                                        class="flex btn-sm btn-neutral border-base mx-1">
-                                            {profile && (
-                                            <ProfilePage />
-                                            )}
-                                            <div className='p-2'>
-                                                <span class=" pe-2">
-                                                    <i class="bi bi-people"></i>
-                                                </span>
-                                                <span class=" pe-4" >Profile</span>
-                                                <button onClick={toggleModal}
-                                                >Edit Profile</button>
-                                            </div>
-                                        </NavLink>
-                                        <NavLink href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
-                                            <span class=" pe-1">
-                                                <i class="bi bi-logout"></i>
-                                            </span>
+                                    <div class="mx-n4 float-right">
+                                        <button class="btn d-inline-flex btn-sm btn-primary mx-4" 
+                                        onClick={() => {
+                                            localStorage.clear(navigate("/login"))
+                                        }}>
                                             <span>Logout</span>
-                                        </NavLink>
-                                    </div> */}
-
-                                    
+                                        </button>
+                                    </div>                                     
                                 </div>
                             </div>
 
@@ -119,16 +103,10 @@ function Admin() {
                                 <li class="nav-item">
                                     <NavLink to="#" class="nav-link font-regular">Delete Event</NavLink>
                                 </li>
-                                <br/> <br/>
-                                <li class="nav-item" >
-                                    <NavLink to="#" class="nav-link font-regular ">logout</NavLink>
-                                </li>
                             </ul>
                         </div>
                     </div>
                 </header>
-
-        {/* create form */}
 
          {/* dashboard */}
 
@@ -212,13 +190,12 @@ function Admin() {
 
 
         {/* bookings*/}
-                            <div class="card-header" >
-                            <h5 class="mb-0">AllInEvents Current Bookings</h5>
+                            <div class="card-header m-3 bg-slate-600" >
+                            <h5 class="mb-2 text-primary text-center">AllInEvents Current Bookings</h5>
                             </div>
                         <div class="table-responsive">
-
                         <table class="table table-hover table-nowrap">
-                            <thead class="thead-light">
+                            <thead class="thead-dark ">
                                 <tr>
                                     <th scope="col">Event Name</th>
                                     <th scope="col">Event Date</th>
@@ -259,13 +236,13 @@ function Admin() {
                     </div>
 
         {/* engagements */}
-                        <div class="card-header">
-                        <h5 class="mb-0">AllInEvents Engagements</h5>
+                        <div class="card-header m-3 text-center bg-slate-600" >
+                            <h5 class="mb-2 text-primary">AllInEvents Engagements</h5>
                         </div>
 
                         <div class="table-responsive">
                         <table class="table table-hover table-nowrap">
-                            <thead class="thead-light">
+                            <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">Client Name</th>
                                     <th scope="col">Client Email</th>
