@@ -2,7 +2,6 @@ import React from 'react';
 import {
 Nav,
 NavLink,
-Bars,
 NavMenu,
 NavBtn,
 NavBtnLink,
@@ -12,10 +11,8 @@ const Navbar = () => {
 return (
 	<>
 	<Nav>
-		<Bars />
-	<NavMenu style={{display: "d-flex", justifyContent: 
-	"center"}}>
-		<NavLink className="flex 1" to='/' >  AllInEvents </NavLink>
+	<NavMenu style={{display: "d-flex", justifyContent: "center"}}>
+		<NavLink className="flex 1" to='/' > Home</NavLink>
 		<NavLink to='/services'> Services </NavLink>
 		<NavLink to='/contact' >Contact</NavLink>
 	</NavMenu>
