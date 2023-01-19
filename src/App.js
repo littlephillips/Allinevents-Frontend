@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
 
-//pages
+// pages
 import AboutPage from './pages/AboutPage'
 import AdminPage from './pages/AdminPage'
 import BookingsPage from './pages/BookingsPage'
@@ -46,7 +46,7 @@ function App() {
                 imageSrc={"https://media.istockphoto.com/id/496971209/photo/the-begining-of-forever.jpg?s=612x612&w=0&k=20&c=J7uidujGk1TMNiSIMMvxyIWsVE5Pzhyvb3upPLeank0="}
                 title={"Celebrate Affordably."}
                 subtitle={"You dont have to break the bank to get your dream wedding...."}
-                flipped={true}r
+                flipped={true}
               />
               <AboutPage />
               <Footer/>
@@ -54,7 +54,7 @@ function App() {
             }
           />
       <Route path="/" element= {<HomePage/>} />
-      <Route path="/about" element={<AboutPage/>} />
+      {/* <Route path="/about" element={<AboutPage/>} /> */}
       <Route path="/admin" element={<AdminPage/>} />
       <Route path="/contact" element={<ContactPage/>} />
       <Route path="/booking" element={<BookingsPage />} />

@@ -53,21 +53,21 @@ margin-right: 30px;
 
 export const NavBtnLink = styled(Link)
 `
-background: #000;
-border-radius: 5px;
-padding: 8px 20px;
-font-size:20px;
+background: #2867f0;
+border-radius: 8px;
+padding: 8px ;
+font-size: 20px;
 color: #FFF;
 outline: none;
 border: none;
 cursor: pointer;
 transtion: all 0.2s ease-in-out;
 text-decoration: none;
+maargin-right: 10px;
 &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #000;
-	font-weight: bolder;
+    background: #446ec8;
+    color: #ff0;
     text-decoration: none;
 }
 
