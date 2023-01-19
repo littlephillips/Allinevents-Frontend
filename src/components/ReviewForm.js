@@ -47,7 +47,7 @@ function ReviewForm({handleNewReview}) {
       <div className='lg:grid sm:hidden xs:hidden'>
         <div className="py-6 md:py-0 md:px-6">
           <h1 className="text-4xl font-bold">Get in touch</h1>
-          <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
+          <p className="pt-2 pb-4">The information you provide us greatly helps us improve our services</p>
           <div className="space-y-4">
             <p className="flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">

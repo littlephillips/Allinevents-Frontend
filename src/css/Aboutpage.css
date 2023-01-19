@@ -1,4 +1,7 @@
-
+/* 
+.main-content{
+  background-color: red;
+}
 .column {
   float: left;
   width: 33%;
@@ -16,6 +19,10 @@
     height: 20%;
 }
 
+.row{
+  height: 10vh;
+}
+
 .about-section {
   padding-top: 120px;
   padding: 120px;
@@ -23,6 +30,7 @@
   text-align: center;
   height: 70%;
   background-color: #f3f1ec;
+  background-color: pink;
   color: hsla(0, 0%, 2%, 0.974);
   padding-bottom: 150px;
 }
@@ -64,4 +72,4 @@
     width: 100%;
     display: block;
   }
-}
+} */

@@ -27,7 +27,7 @@ module.exports = {
   },
   fontFamily: {
     primary: ["Playfair Display", "serif"],
-    secondary: ['Playfair Display', "serif"]
+    secondary: ['Poppins', "sans-serif"]
   },
   plugins: [],
 }
