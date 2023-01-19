@@ -29,7 +29,7 @@ function About() {
 
       <div className="column">
       <div class="card">
-      <img src={image2} alt="John"></img>
+      <img src={image2} alt="John" className='isirrr'></img>
       <div className="container">
         <h2>Philip Kinuthia</h2>
         <p className="title">Art Director</p>
@@ -41,7 +41,7 @@ function About() {
 
      <div className="column">
       <div className="card">
-       <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2022-03/220317-Cynthia-Talla-ew-321p-4bc199.jpg" alt="John"></img>
+       <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2022-03/220317-Cynthia-Talla-ew-321p-4bc199.jpg" alt="John" className='isirrr'></img>
          <div className="container">
         <h2>Silvia Mwangi</h2>
         <p className="title">Designer</p>
