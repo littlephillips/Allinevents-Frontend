@@ -3,15 +3,18 @@ import React, {useState} from 'react'
 
 function ReviewForm({handleNewReview}) {
 
+  const event = localStorage.getItem('event')
+
   const [formData,setFormData]=useState([{
     fullname:"",
     email: "",
     comment:"",
+    eventname:"",
   }])
 
   const handleSaveReview = async (e) => {
         e.preventDefault();
-          const res = await fetch("/comments", {
+          const res = await fetch("/reviews", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -21,15 +24,16 @@ function ReviewForm({handleNewReview}) {
                 fullname: formData.fullname,
                 email: formData.email,
                 comment: formData.comment,
+                eventname: event
             }),
             });
             const response = await res.json();
             handleNewReview(response);
-            setFormData([{
-              fullname:"",
-              email: "",
-              comment:"",
-            }]);
+            // setFormData([{
+            //   fullname:"",
+            //   email: "",
+            //   comment:"",
+            // }]);
 
     };
 
@@ -47,13 +51,13 @@ function ReviewForm({handleNewReview}) {
       <div className='lg:grid sm:hidden xs:hidden'>
         <div className="py-6 md:py-0 md:px-6">
           <h1 className="text-4xl font-bold">Get in touch</h1>
-          <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
+          <p className="pt-2 pb-4">We would love to hear your experience with us</p>
           <div className="space-y-4">
             <p className="flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
               </svg>
-              <span>Fake address, 9999 City</span>
+              <span>Address, 9999 City</span>
             </p>
             <p className="flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
@@ -66,7 +70,7 @@ function ReviewForm({handleNewReview}) {
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
               </svg>
-              <span>contact@business.com</span>
+              <span>contact@allinevents.com</span>
             </p>
           </div>
         </div>
