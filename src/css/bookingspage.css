@@ -1,7 +1,7 @@
 
 .form_box 
 {
-    background-color: #ebebeb; 
+    background-color: #d9b746;
     width: 450px;
     max-width: 90%;
     margin: 3% auto;
@@ -15,7 +15,7 @@
 
 .form_box > h1 
 {
-    color: rgba(37, 150, 190, 1);
+    color:#2867f0;
     font-size: 32px;
     font-weight: 500;
     text-align: center;
@@ -30,7 +30,7 @@
 
 hr 
 {
-    color: #444866;
+    color: rgba(37, 150, 190, 1);
     opacity: 0.3;
 }
 
@@ -38,31 +38,16 @@ hr
 h3, h4
 {
 
-    color: rgba(37, 150, 190, 1);
-    font-size: 20px;
+    
+    color:#2867f0;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 10px;
 }
 
-
-#icon 
-{
-    display: inline-block;
-    width: 30px;
-    background-color:#444866;
-    padding: 12px 0px 11px 15px; 
-    color: white;
-    margin-left: 15px;
-    padding: 12px 0px 11px 15px;
-    margin-left: 15px;
-    border: solid 0px #cbc9c9;
-    border-radius: 4px 0px 0px 4px;
-    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-} 
-
 .inner-form
 {
-    font-size: 18px;
+    font-size: 16px;
     color: #444866;
     background-color: #fff; 
     max-width: 75%;
@@ -113,27 +98,27 @@ h3, h4
     font-weight: 800;
 }
 
-
 .booking-button
 {
     background-color:rgba(37, 150, 190, 1);
-    font-size: 14px;
-    font-weight: 600;
     color:#FFF;
-    padding: 12px 20px;
-    margin-left: 15px;
     display: inline-block;
-    text-decoration: none;
-    border-radius: 5px;  
-    box-shadow: 0 3px rgba(58,87,175,.75);
     transition: all 0.1s linear 0s; 
     top: 0px;
+    font-size: 14px;
     position: relative;
+    padding: 12px 20px;
+    margin-left: 15px;
+    box-shadow: 0 3px rgba(58,87,175,.75);
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px; 
 }
-
 
 
 .booking-button:hover 
 {
     background-color:#444866;
 }
+

@@ -1,3 +1,4 @@
+
 .contact-page
 {
     padding-top: 2rem;
@@ -88,14 +89,10 @@
     font-size: 25px;
     display: grid;
     place-items: center;
-    position: relative; 
-    
+    position: relative;
+    top: 15px;     
 }
-.FaLocationArrow,
-.FaMailBulk
-{
-    top: 15px; 
-}
+
 
 
 .contact-text
@@ -195,6 +192,19 @@
     height: 450px;
     border: none;
 }
+
+.contact-success
+{
+    margin-top: 30px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color:rgba(255, 189, 29, 0.7);
+    padding: 10px;
+    color: #000;
+    font-size: 20px;
+} 
 
 @media screen and (max-width: 1200px){
     .contact-container

@@ -2,7 +2,6 @@ import React from 'react';
 import {
 Nav,
 NavLink,
-Bars,
 NavMenu,
 NavBtn,
 NavBtnLink,
@@ -10,27 +9,20 @@ NavBtnLink,
 
 const Navbar = () => {
 return (
-	<div
-	style={{backgroundImage: `url('public/img/bg-nav.png')')`}}>
-	<NavMenu className='box-border m-auto '>
-		<div class="flex items-center space-x-4 justify-between ">
-			<NavLink className="flex" to='/' >AllInEvents </NavLink>
-			{/* <Bars /> */}
-			<div class=" flex flex-row items-center">
-				<NavLink className="" to='/services'>Services</NavLink>
-				
-			</div>
-			<NavLink to='/contact' >Contact</NavLink>
-		</div>
-		
-		
-
-
-	{/* <NavBtn>
-		<NavBtnLink to='/login'>Admin</NavBtnLink>
-	</NavBtn> */}
+	<>
+	<Nav>
+	<NavMenu style={{display: "d-flex", justifyContent: "center"}}>
+		<NavLink className="flex 1" to='/' > Home</NavLink>
+		<NavLink to='/services'> Services </NavLink>
+		<NavLink to='/contact' >Contact</NavLink>
 	</NavMenu>
-	</div>
+
+
+	<NavBtn>
+		<NavBtnLink to='/login'>Admin</NavBtnLink>
+	</NavBtn>
+	</Nav>
+	</>
 );
 };
 
