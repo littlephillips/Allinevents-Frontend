@@ -87,7 +87,6 @@ function Admin() {
                                     </div>                                     
                                 </div>
                             </div>
-
                             <ul class="nav nav-tabs mt-4 overflow-x border-0">
                                 <li class="nav-item ">
                                     <NavLink
@@ -96,12 +95,6 @@ function Admin() {
                                     {create && (
                                         <AdminCreateForm />
                                     )}
-                                </li>
-                                <li class="nav-item">
-                                    <NavLink to="#" class="nav-link font-regular">Update Event</NavLink>
-                                </li>
-                                <li class="nav-item">
-                                    <NavLink to="#" class="nav-link font-regular">Delete Event</NavLink>
                                 </li>
                             </ul>
                         </div>

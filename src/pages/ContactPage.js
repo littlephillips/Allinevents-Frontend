@@ -129,6 +129,7 @@ function handleChange(e){
                 <input 
                   type="text" 
                   placeholder='fullname'
+                  required
                   name="fullname"
                   value={engage.fullname}
                   onChange={handleChange}
@@ -137,12 +138,14 @@ function handleChange(e){
                   type="email" 
                   placeholder='Email'
                   name ="email"
+                  required
                   value={engage.email}
                   onChange={handleChange}
                 />
                 <textarea 
                   placeholder='Comment'
                   name="comment"
+                  required
                   value={engage.comment}
                   onChange={handleChange}
                 />

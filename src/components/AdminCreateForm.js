@@ -3,11 +3,12 @@ import React, {useState} from 'react'
 
 function AdminCreateForm() {
 
+    // const [update, setUpdating] = useState(false)
     const [event, setEvent] = useState({
-        name:'',
+        eventname:'',
         description:'',
         services:'',
-        image: null
+        image_url: ''
     })
 
     function handleChange(e){
@@ -21,29 +22,28 @@ function AdminCreateForm() {
         });
     }
 
-    const handleSubmit =  async (e) => {
+    const handleSubmit = e => {
         e.preventDefault()
         console.log(event)
-        const res = await fetch("/events", {
+        fetch("/events", {
             method: "POST",
             headers: {
-            "Content-type": 'application/json'
+                "Content-type": 'application/json'
             },
             body: JSON.stringify ({
                 id: event.id,
-                name: event.name,
+                name: event.eventname,
                 description: event.description,
                 services: event.services,
-                image: event.image
+                image_url: event.image_url
             })
         })
 
-        await res.json()
         setEvent({
-            name:'',
+            eventname:'',
             description:'',
             services:'',
-            image: null
+            image_url: ''
         })
     }  
 
@@ -55,9 +55,9 @@ function AdminCreateForm() {
         <form onSubmit={handleSubmit} className='w-[50%] relative mx-auto flex flex-col p-4'>
             <input 
             className='border border-black py-3 px-2 my-2 w-full'
-            type="text" name="name" id="name" 
+            type="text" name="eventname" id="name" 
             placeholder='event name'
-            value={event.name}
+            value={event.eventname}
             onChange={handleChange}
             />
 
@@ -76,7 +76,11 @@ function AdminCreateForm() {
             onChange={handleChange}
             />
 
-            <input type="file" name="image" id="image" 
+            <input 
+            className='border border-black py-4 px-2 my-2 w-full'
+            placeholder='image url' 
+            type="text" name="image_url" id="image" 
+            value={event.image_url}
             onChange={handleChange}
             />
 

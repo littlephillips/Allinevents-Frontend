@@ -23,23 +23,19 @@ function Reviews() {
 
         return (
 
-            <div className='h-screen flex flex-col w-screen sm:flex items-center justify-center  opacity-[90%] p-4 rounded-sm shadow-sm bg-[#f4f49f] dark:bg-gray-800 dark:text-gray-50'>
-                <ReviewForm handleNewReview = {handleNewReview} reviews={reviews}/>
-                    {reviews.map((review) => (
-                        <ReviewCard key = {review.id} review = {review} />)
-                    )}
 
-          {/*  <div className=' bg-white flex flex-col w-screen sm:flex items-center justify-center  opacity-[90%] p-4 rounded-sm shadow-sm dark:bg-gray-800 dark:text-gray-50'>
-                    {reviews.map((review) => (
-                        <ReviewCard key = {review.id} review = {review} />)
-                    )}
-                    <ReviewForm handleNewReview = {handleNewReview} reviews={reviews}/>*/}
+    <div className='flex flex-'>
+    <button class="prev-page-reviews" onClick={() => window.history.back()}>Go Back</button>
 
-            </div>
-            
-            // </div>
-        
-        );
+        <div className='bg-white flex flex-col w-screen sm:flex items-center justify-center  opacity-[90%] p-4 rounded-sm shadow-sm dark:bg-gray-800 dark:text-gray-50 overflow-y-scroll'>
+                {reviews.map((review) => (
+                    <ReviewCard key = {review.id} review = {review} />)
+                )}
+        </div>  
+            <ReviewForm handleNewReview = {handleNewReview} reviews={reviews}/>  
+    </div>
+
+    )
 }
 
 export default Reviews
