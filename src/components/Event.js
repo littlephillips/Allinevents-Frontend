@@ -6,7 +6,7 @@ function Event(){
     const [services , setServices] = useState([])
 
     useEffect(()=> {
-    fetch("/events")
+    fetch("/services")
         .then((resp) => resp.json())
         .then((services) => {setServices(services) });
     }, []);

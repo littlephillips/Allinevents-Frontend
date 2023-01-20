@@ -1,11 +1,15 @@
 import { NavLink } from 'react-router-dom'
 import Footer from '../components/Footer'
+import "../css/backbutton.css"
 
 
 const ServicePage = ({services}) =>{
 
 return(
 <>
+<button class="prev-page-services" onClick={() => window.history.back()}>Go Back</button>
+
+
     <div class="flex flex-col items-center justify-center w-screen ">
     {services.map((services) => (
     <div key={services.id} class=" border-b-[22px] border-[#FFD23F] w-screen bg-cover bg-center h-screen "

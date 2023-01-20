@@ -1,0 +1,14 @@
+.prev-page-services{
+    background-color: #FFD23F;
+    color: #2867f0;  font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+    width: 100%; height: 38px;
+    margin-left: 3px;
+    border-radius: .2rem;
+}
+
+.prev-page-services:hover{
+    background-color: rgb(177, 141, 211);
+    color: rgb(27, 26, 26);
+}

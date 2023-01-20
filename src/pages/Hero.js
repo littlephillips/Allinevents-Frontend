@@ -12,7 +12,6 @@ const Hero = () =>{
         <h1 className="p-3 hero brand font-brand font-bold ">AllIn Events</h1>
         
         <h2 className="hero_title font-primary">Creating Unforgettable Memories</h2>
-           
     </div>
     )
 }
