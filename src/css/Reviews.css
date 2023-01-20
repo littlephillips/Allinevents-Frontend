@@ -1,7 +1,6 @@
 
 .reviews-items{
     width: 80%;
-    /* height: 100%; */
     margin-left: 10%;
     top: 2725px;
     margin-top: 7%;
@@ -20,3 +19,19 @@
 .reviews {
     text-align: center;
 }
+
+.prev-page-reviews
+{
+    background-color: #FFD23F;
+    color: #2867f0;  font-weight: 700;
+    text-align: center;
+    width: 150px; height: 68px;
+    margin-top: 20px;    margin-left: 3px;
+    border-radius: .2rem;
+    padding: 0.5rem;
+}
+
+.prev-page-reviews:hover{
+    background-color: rgb(177, 141, 211);
+    color: rgb(27, 26, 26);
+} 

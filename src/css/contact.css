@@ -76,7 +76,7 @@
 }
 .contact-icon
 { 
-    background: rgba(37, 150, 190, 1);
+    background: #FFD23F;
     height: 60px;
     width: 60px;
     text-align: center;
@@ -90,7 +90,8 @@
     display: grid;
     place-items: center;
     position: relative;
-    top: 15px;     
+    top: 15px;    
+    color: rgba(37, 150, 190, 1); 
 }
 
 

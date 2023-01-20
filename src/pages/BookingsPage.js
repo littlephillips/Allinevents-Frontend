@@ -99,6 +99,11 @@ const handleSubmit = async (e) => {
 
     return (
 
+
+
+        <div className='main-booking'>
+                <button class="prev-page-booking" onClick={() => window.history.back()}>Go Back</button>
+
         <div className="form_box">
             <h1>BOOK YOUR EVENT</h1>
             <form className="booking-form" onSubmit={handleSubmit}>
@@ -183,6 +188,7 @@ const handleSubmit = async (e) => {
                         </div>
                     ) : null}    
             </form>
+        </div>
         </div>
                 
     )

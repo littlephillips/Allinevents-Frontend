@@ -1,16 +1,8 @@
-// import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import Footer from '../components/Footer'
-// import BookingsPage from '../pages/BookingsPage'
 
 
 const ServicePage = ({services}) =>{
-
-    // const [booking, setBooking] = useState(false)
-
-    // const toggleBooking = () => {
-    //     setBooking(!booking)
-    // }
 
 return(
 <>
@@ -35,8 +27,8 @@ return(
                     </p>
                     <p class="text-center font-secondary text-white lg:text-3xl md:text-2xl sm:text-xl  mb-4 sm:p-2 ">
                         {services.services}
-{/* 
-                        {services.services.map(
+                        
+                        {/* {services.services.map(
                             services => (
                                 <ul key={services.id}>
                                     <li>{services}</li>
@@ -52,10 +44,6 @@ return(
                             </svg>
                             <span>
                                 <NavLink class="font-primary" to="/booking">Book</NavLink>
-                                {/* <NavLink  onClick={toggleBooking}>Book</NavLink>
-                                {booking && (
-                                    <BookingsPage/>
-                                )} */}
                                 </span>
                         </button>
                         <button style={{marginTop: "10px", }} class="opacity-75 bg-gray-300 hover:bg-pink-900 hover:text-white text-sm font-bold py-2.5 px-4 rounded inline-flex items-center">
