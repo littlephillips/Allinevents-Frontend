@@ -30,11 +30,16 @@ import ReviewsPage from './pages/ReviewsPage'
 function App() {
   return(
   <BrowserRouter>
-  <Navbar />
+  
+  {/* <HomePage /> */}
     <Routes>
     <Route path='/' element= {
-        <>
+        <>  
+        {/* <Navbar />
+            <Hero /> */}
+
             <Hero />
+            <Navbar />
             <Slider
                 imageSrc={"https://cdn0.weddingwire.com/vendor/207389/original/960/jpeg/img-3866_51_983702.webp"}
                 title={"One Step Event Planner."}

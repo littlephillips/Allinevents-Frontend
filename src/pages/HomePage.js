@@ -1,6 +1,9 @@
 // import Hero from "./Hero";
 // import Slider from "./Slider";
 
+const { default: Navbar } = require("../components/Navbar")
+const { default: Hero } = require("./Hero")
+
 
 // const HomePage = () =>{
 
@@ -38,3 +41,25 @@
 // }
 
 // export default HomePage;
+
+// const HomePage = () => {
+//     return(
+       
+//     )
+// }
+
+// export default HomePage;
+
+const HomePage = () => {
+
+    return(
+        <>
+            <Navbar />
+            <Hero />
+        </>
+
+    )
+
+}
+
+export default HomePage;
