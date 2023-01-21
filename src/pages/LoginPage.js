@@ -2,6 +2,7 @@ import React, { useState }from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 
 import  "../css/notification.css"
+import "../css/backbutton.css"
 
 
 function LoginForm() {
@@ -26,6 +27,8 @@ function LoginForm() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: localStorage.token,
       },
       body: JSON.stringify({username, password}),
     })
@@ -51,6 +54,9 @@ function LoginForm() {
 
 
   return (
+    <>
+<button class="prev-page-services" onClick={() => window.history.back()}>Go Back</button>
+
     <div className="font-bold bg-[url('https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1600')] bg-cover min-h-screen flex flex-col items-center justify-center">
         <div class="w-full max-w-xs opacity-[80%]">
 
@@ -117,6 +123,7 @@ function LoginForm() {
         </form>
       </div>
     </div>
+    </>
 
   )
 }

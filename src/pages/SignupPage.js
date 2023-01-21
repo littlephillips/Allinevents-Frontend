@@ -46,6 +46,9 @@ function SignupPage() {
   }
 
   return (
+    <>
+    <button class="prev-page-services" onClick={() => window.history.back()}>Go Back</button>
+    
     <div className="bg-[url('https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1600')] bg-cover min-h-screen bg-slate flex flex-col items-center justify-center">
         <div class="opacity-80 pw-full max-w-xs ">
 
@@ -69,7 +72,7 @@ function SignupPage() {
             ) : null}
           
           <div class="mb-4">
-            <label class="text-xl block text-gray-700 text-sm font-bold mb-2" for="username">
+            <label class="lg-text-xl block text-gray-700 text-sm font-bold mb-2" for="username">
               Username
             </label>
             <input 
@@ -133,6 +136,7 @@ function SignupPage() {
         <div className="loader"></div>
       </div>
     </div>
+    </>
 
   )
 }
