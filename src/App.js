@@ -28,6 +28,11 @@ import Event from './components/Event'
 import ReviewsPage from './pages/ReviewsPage'
 
 function App() {
+  let token = localStorage.getItem("token");
+  let user = localStorage.getItem("user");
+  if (token && user) {
+    this.props.fetchCurrentUser();
+  }
   return(
   <BrowserRouter>
   

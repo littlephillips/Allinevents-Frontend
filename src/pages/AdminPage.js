@@ -9,15 +9,11 @@ function Admin() {
     const [bookings, setBookings] = useState([]);
     const [engagements, setEngagements] = useState([]);
     const [create, setCreateForm] = useState(false)
-    // const [profile, setProfile] = useState(false)
 
     const toggleCreateForm = () => {
         setCreateForm(!create)
     }
 
-    // const toggleModal = () => {
-    //     setProfile(!profile)
-    // }
 
 
 
@@ -80,7 +76,7 @@ function Admin() {
                                     <div class="mx-n4 float-right">
                                         <button class="btn d-inline-flex btn-sm btn-primary mx-4" 
                                         onClick={() => {
-                                            localStorage.clear(navigate("/login"))
+                                            localStorage.clear(navigate("/"))
                                         }}>
                                             <span>Logout</span>
                                         </button>
@@ -183,12 +179,12 @@ function Admin() {
 
 
         {/* bookings*/}
-                            <div class="card-header m-3 bg-slate-600" >
-                            <h5 class="mb-2 text-primary text-center">AllInEvents Current Bookings</h5>
-                            </div>
+                        <div class="card-header m-3 text-center bg-primary" >
+                            <h1 class="lg text-lg text-white ">AllInEvents Bookings</h1>
+                        </div>
                         <div class="table-responsive">
                         <table class="table table-hover table-nowrap">
-                            <thead class="thead-dark ">
+                            <thead class="lg text-lg text-black bg-slate-200">
                                 <tr>
                                     <th scope="col">Event Name</th>
                                     <th scope="col">Event Date</th>
@@ -212,7 +208,7 @@ function Admin() {
                                                 <td>📞  {booking.phonenumber}   </td>
                                                 <td class="text-center">
                                                 <button type="button" onClick={() => removeBooking(booking.id)} class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                                    <i class="bi bi-trash" ></i>
+                                                    <i class="bi bi-trash text-black-700 hover:text-red-700" ></i>
                                                 </button>
                                                 </td>
                                             </tr>
@@ -229,13 +225,13 @@ function Admin() {
                     </div>
 
         {/* engagements */}
-                        <div class="card-header m-3 text-center bg-slate-600" >
-                            <h5 class="mb-2 text-primary">AllInEvents Engagements</h5>
+                        <div class="card-header m-3 text-center bg-primary" >
+                            <h1 class="lg text-lg text-white ">AllInEvents Engagements</h1>
                         </div>
 
                         <div class="table-responsive">
                         <table class="table table-hover table-nowrap">
-                            <thead class="thead-dark">
+                            <thead class="lg text-lg text-black bg-slate-200">
                                 <tr>
                                     <th scope="col">Client Name</th>
                                     <th scope="col">Client Email</th>
@@ -255,7 +251,7 @@ function Admin() {
                                                 <td>💬  {engagement.comment}</td>
                                                 <td class="text-center">
                                                 <button type="button" onClick={() => removeEngagement(engagement.id)} class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                                    <i class="bi bi-trash" ></i>
+                                                <i class="bi bi-trash text-black-700 hover:text-red-700" ></i>
                                                 </button>
                                                 </td>
                                             </tr>     

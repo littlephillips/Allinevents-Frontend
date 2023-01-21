@@ -1,11 +1,14 @@
 import React, {useState} from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+
 
 // css
 import "../css/bookingspage.css"
 import  "../css/notification.css"
 
 function BookingsPage() {
+
+    const navigate = useNavigate()
 
     const [notification, setNotification] = useState(false)
     const [userInfo, setUserInfo] = useState(
@@ -70,6 +73,7 @@ const handleSubmit = async (e) => {
 
     function endNotification() {
         setNotification((notification) => !notification)
+        navigate("/services")
     }
     
 

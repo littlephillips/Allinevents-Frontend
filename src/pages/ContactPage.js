@@ -3,7 +3,7 @@ import { FaMapMarkerAlt,FaPhone, FaMailBulk} from "react-icons/fa";
 
 import '../css/contact.css'
 import  "../css/notification.css"
-
+import "../css/backbutton.css"
 
 
 export default function ContactPage() {
@@ -62,7 +62,10 @@ function handleChange(e){
 
 
   return (
-    <div className='contact-page'>
+    <>
+    <button class="prev-page-services" onClick={() => window.history.back()}>Go Back</button>
+
+      <div className='contact-page'>
 
       <div className='contact-heading'>
         <h2>Contact Us</h2>
@@ -169,6 +172,7 @@ function handleChange(e){
 
       </div>
     </div>
+  </>
   )
 }
 
