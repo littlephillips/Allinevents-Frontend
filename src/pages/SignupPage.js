@@ -22,7 +22,7 @@ function SignupPage() {
 
   function handleSubmit(e){
     e.preventDefault()
-    fetch("http://35.172.230.181:3010/admins", {
+    fetch("/admins", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

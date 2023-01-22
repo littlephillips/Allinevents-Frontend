@@ -7,7 +7,7 @@ function Event(){
     const [services , setServices] = useState([])
 
     useEffect(()=> {
-    fetch("http://35.172.230.181:3010/events")
+    fetch("/events")
         .then((resp) => resp.json())
         .then((services) => {setServices(services) });
     }, []);

@@ -42,7 +42,7 @@ function BookingsPage() {
 
 const handleSubmit = async (e) => {
     e.preventDefault()
-    const res = await fetch('http://35.172.230.181:3010/bookings', {
+    const res = await fetch('/bookings', {
     method: "POST",
     headers: {
         'Content-type': 'application/json'

@@ -23,7 +23,7 @@ function LoginForm() {
   function submitHandler(e){
     e.preventDefault()
     setError(null)
-    fetch("http://35.172.230.181:3010/login", {
+    fetch("/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

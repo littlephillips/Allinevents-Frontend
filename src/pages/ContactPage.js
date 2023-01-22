@@ -35,7 +35,7 @@ function handleChange(e){
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const res = await fetch("http://35.172.230.181:3010/engagements", {
+    const res = await fetch("/engagements", {
       method: "POST",
       headers: {
         "Content-Type": 'application/json'

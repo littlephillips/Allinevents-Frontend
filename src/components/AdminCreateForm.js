@@ -26,7 +26,7 @@ function AdminCreateForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const res = await fetch('http://35.172.230.181:3010/events', {
+        const res = await fetch('/events', {
             method: "POST",
             headers: {
                 'Content-type': 'application/json'

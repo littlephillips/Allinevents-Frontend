@@ -20,14 +20,14 @@ function Admin() {
     // get and delete booking
 
     useEffect(() => {
-        fetch("http://35.172.230.181:3010/bookings")
+        fetch("/bookings")
         .then((res) => res.json())
         .then((data) => setBookings(data))
     }, []);
 
 
     const removeBooking = (id) => {
-        fetch(`http://35.172.230.181:3010/bookings/${id}`,
+        fetch(`/bookings/${id}`,
             {
                 method: 'DELETE',
                 headers: {
@@ -44,7 +44,7 @@ function Admin() {
     // get and delete booking    
 
     useEffect(() => {
-        fetch("http://35.172.230.181:3010/engagements")
+        fetch("/engagements")
         .then((res) => res.json())
         .then((data) => setEngagements(data))
     }, []);
@@ -53,7 +53,7 @@ function Admin() {
 
 
     const removeEngagement = (id) => {
-        fetch(`http://35.172.230.181:3010/engagements/${id}`,
+        fetch(`/engagements/${id}`,
             {
                 method: 'DELETE',
                 headers: {

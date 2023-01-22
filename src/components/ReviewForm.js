@@ -10,7 +10,7 @@ function ReviewForm({handleNewReview}) {
 
   const handleSaveReview = async (e) => {
         e.preventDefault();
-          const res = await fetch("http://35.172.230.181:3010/reviews", {
+          const res = await fetch("/reviews", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
