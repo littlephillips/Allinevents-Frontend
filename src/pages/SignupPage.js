@@ -22,7 +22,7 @@ function SignupPage() {
 
   function handleSubmit(e){
     e.preventDefault()
-    fetch("/admins", {
+    fetch("http://35.172.230.181:3010/admins", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -47,7 +47,7 @@ function SignupPage() {
 
   return (
     <>
-    <button class="prev-page-services" onClick={() => window.history.back()}>Go Back</button>
+        <button class="prev-page" onClick={() => window.history.back()}>Go Back</button>
     
     <div className="bg-[url('https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1600')] bg-cover min-h-screen bg-slate flex flex-col items-center justify-center">
         <div class="opacity-80 pw-full max-w-xs ">

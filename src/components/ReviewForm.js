@@ -1,9 +1,6 @@
 import React, {useState} from 'react'
-// import '../css/Reviews.css'
 
 function ReviewForm({handleNewReview}) {
-
-  // const event = localStorage.getItem('event')
 
   const [formData,setFormData]=useState([{
     fullname:"",
@@ -13,7 +10,7 @@ function ReviewForm({handleNewReview}) {
 
   const handleSaveReview = async (e) => {
         e.preventDefault();
-          const res = await fetch("/reviews", {
+          const res = await fetch("http://localhost:3000/comments", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -43,7 +40,7 @@ function ReviewForm({handleNewReview}) {
 
 
   return(
-    <>
+    <>   
     <section  className="float-left box-border h-screen w-screen flex flex-col justify-center overflow-y">
     <div className=" lg:grid max-w-2xl rounded-sm shadow-sm scroll-fix bg-[#FFD23F] grid-cols-1  px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
       <div className='lg:grid sm:hidden xs:hidden'>

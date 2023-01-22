@@ -1,5 +1,5 @@
-.errors{
-    /* width: 100vw; */
+.errors
+{
     background-image: url('../../public/img/Error\ with\ a\ broken\ robot-amico.svg');
     background-size:contain;
     background-repeat: no-repeat;
@@ -14,23 +14,15 @@
     overflow: hidden;
 }
 
-.container{
+
+.container
+{
     position: relative;
     box-sizing: border-box;
     min-height: 100vh;
     margin: 1.5rem;
 }
-.prev-page{
-    padding: 0.5rem;
-    background-color: blueviolet;
-    text-align: center;
-    font-weight: 700;
-    border-radius: .2rem;
-    margin: 2rem;
-    
-}
 
-.prev-page:hover{
-    background-color: rgb(177, 141, 211);
-    color: rgb(27, 26, 26);
-}
+
+
+

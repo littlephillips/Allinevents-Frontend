@@ -2,9 +2,10 @@ import React, {useEffect, useState} from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import AdminCreateForm from '../components/AdminCreateForm';
 
-// import ProfilePage from './ProfilePage';
+
 
 function Admin() {
+
     const navigate = useNavigate();
     const [bookings, setBookings] = useState([]);
     const [engagements, setEngagements] = useState([]);
@@ -16,48 +17,54 @@ function Admin() {
 
 
 
+    // get and delete booking
 
     useEffect(() => {
-        fetch("/bookings")
+        fetch("http://35.172.230.181:3010/bookings")
         .then((res) => res.json())
         .then((data) => setBookings(data))
     }, []);
 
 
+    const removeBooking = (id) => {
+        fetch(`/http://35.172.230.181:3010/bookings/${id}`,
+            {
+                method: 'DELETE',
+                headers: {
+                    'Accept': 'application/json',
+                    'content-Type': 'application/json'
+                }
+            })
+
+            .then(console.log("Deleted"))
+            .catch(err => console.log(err));
+        };
+
+    
+    // get and delete booking    
+
     useEffect(() => {
-        fetch("/engagements")
+        fetch("http://35.172.230.181:3010/engagements")
         .then((res) => res.json())
         .then((data) => setEngagements(data))
     }, []);
 
 
-    const removeBooking = (id) => {
-            fetch(`/bookings/${id}`,
-                {
-                    method: 'DELETE',
-                    headers: {
-                        'Accept': 'application/json',
-                        'content-Type': 'application/json'
-                    }
-                })
 
-                .then(console.log("Deleted"))
-                .catch(err => console.log(err));
-            };
 
-            const removeEngagement = (id) => {
-                fetch(`/engagements/${id}`,
-                    {
-                        method: 'DELETE',
-                        headers: {
-                            'Accept': 'application/json',
-                            'content-Type': 'application/json'
-                        }
-                    })
+    const removeEngagement = (id) => {
+        fetch(`/http://35.172.230.181:3010/engagements/${id}`,
+            {
+                method: 'DELETE',
+                headers: {
+                    'Accept': 'application/json',
+                    'content-Type': 'application/json'
+                }
+            })
 
-                    .then(console.log("Deleted"))
-                    .catch(err => console.log(err));
-                };
+            .then(console.log("Deleted"))
+            .catch(err => console.log(err));
+        };
 
     // window.console.dir(engagements)
 

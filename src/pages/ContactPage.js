@@ -34,7 +34,7 @@ function handleChange(e){
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const res = await fetch("/engagements", {
+    const res = await fetch("http://35.172.230.181:3010/engagements", {
       method: "POST",
       headers: {
         "Content-Type": 'application/json'
@@ -63,7 +63,7 @@ function handleChange(e){
 
   return (
     <>
-    <button class="prev-page-services" onClick={() => window.history.back()}>Go Back</button>
+        <button class="prev-page" onClick={() => window.history.back()}>Go Back</button>
 
       <div className='contact-page'>
 

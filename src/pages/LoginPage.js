@@ -23,7 +23,7 @@ function LoginForm() {
   function submitHandler(e){
     e.preventDefault()
     setError(null)
-    fetch("/login", {
+    fetch("http://35.172.230.181:3010/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,12 +50,10 @@ function LoginForm() {
     navigate("/admin")
   }
 
- 
-
 
   return (
     <>
-<button class="prev-page-services" onClick={() => window.history.back()}>Go Back</button>
+        <button class="prev-page" onClick={() => window.history.back()}>Go Back</button>
 
     <div className="font-bold bg-[url('https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1600')] bg-cover min-h-screen flex flex-col items-center justify-center">
         <div class="w-full max-w-xs opacity-[80%]">

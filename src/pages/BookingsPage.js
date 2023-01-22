@@ -39,11 +39,10 @@ function BookingsPage() {
         });
     }
     
-// handle form submission
 
 const handleSubmit = async (e) => {
     e.preventDefault()
-    const res = await fetch('/bookings', {
+    const res = await fetch('http://35.172.230.181:3010/bookings', {
     method: "POST",
     headers: {
         'Content-type': 'application/json'
@@ -102,18 +101,17 @@ const handleSubmit = async (e) => {
 
 
     return (
-
-
-
+        <>
+        <button class="prev-page" 
+            onClick={() => window.history.back()}>
+                Go Back
+            </button>
+    
         <div className='main-booking'>
-                <button class="prev-page-booking" onClick={() => window.history.back()}>Go Back</button>
-
         <div className="form_box">
             <h1>BOOK YOUR EVENT</h1>
             <form className="booking-form" onSubmit={handleSubmit}>
-                
                 <hr />
-
             <h2> 📝  Your Details</h2>
 
                 <input 
@@ -194,7 +192,7 @@ const handleSubmit = async (e) => {
             </form>
         </div>
         </div>
-                
+    </>     
     )
 }
 
