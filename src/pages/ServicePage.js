@@ -7,9 +7,7 @@ const ServicePage = ({services}) =>{
 
 return(
 <>
-{/* <button class="prev-page-services" onClick={() => window.history.back()}>Go Back</button> */}
-
-<button class="prev-page" onClick={() => window.history.back()}>Go Back</button>
+    <button class="prev-page" onClick={() => window.history.back()}>Go Back</button>
 
 
     <div class="flex flex-col items-center justify-center w-screen ">
