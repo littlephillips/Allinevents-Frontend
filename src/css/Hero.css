@@ -1,7 +1,9 @@
-.hero {
-  display: flex;
-  justify-items: center;
-  align-items: center;
+
+  .hero 
+  {
+    display: flex;
+    justify-items: center;
+    align-items: center;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -18,19 +20,19 @@
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 15%;
-    /* left: 50%; */
-    color: #F3FCF0;
+    bottom: 45%;
+    color: #dae4d7ed;
+    font-weight: 900;
     font-size: 5rem;
     padding: 15px;
-    /* color: #446ec8; */
   }
 
 .brand{
-  justify-content:center ;
+    justify-content:center ;
     width: 100%;
-    font-size: 3rem;
-    bottom: 45vh;
+    font-size: 5rem;
+    bottom: 43vh;
+    font-weight:800;
     color: #FFD23F;
     letter-spacing: .5rem;
 }
@@ -40,8 +42,7 @@
 {
     .hero_title
     {
-      /* left: 10%; */
-      font-size: 4rem;
+      font-size: 10rem;
     }
 }
 

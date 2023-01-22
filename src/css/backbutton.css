@@ -1,13 +1,21 @@
-.prev-page-services{
-    background-color: rgb(177, 141, 211);
-    color: #2867f0;  font-weight: 700;
+
+.prev-page 
+{
+    background-color: rgba(37, 5, 5, 0.875); 
+    color: gold;
+    width: 100%; height: 35px;
+    font-size: 18px; 
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-style: oblique;
     text-align: center;
-    font-size: 18px;
-    width: 100%; height: 38px;
-    margin-left: 3px;
+    margin: auto; 
     border-radius: .2rem;
+    border: none;
+    outline: none;
 }
 
-.prev-page-services:hover{
+.prev-page:hover{
     color: rgb(27, 26, 26);
-}
+    background-color: rgb(177, 141, 211);
+} 

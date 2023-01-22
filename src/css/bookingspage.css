@@ -4,22 +4,6 @@
     display: flex;
 }
 
-.prev-page-booking{
-    background-color: #FFD23F;
-    color: #2867f0;  font-weight: 700;
-    text-align: center;
-    width: 150px; height: 68px;
-    margin-top: 20px;    margin-left: 3px;
-    border-radius: .2rem;
-    padding: 0.5rem;
-}
-
-.prev-page-booking:hover{
-    background-color: rgb(177, 141, 211);
-    color: rgb(27, 26, 26);
-}
-
-
 .form_box 
 {
     background-color: #d9b746;
