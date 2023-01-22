@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { FaMapMarkerAlt,FaPhone, FaMailBulk} from "react-icons/fa";
+import Footer from "../components/Footer";
 
 import '../css/contact.css'
 import  "../css/notification.css"
@@ -172,6 +173,7 @@ function handleChange(e){
 
       </div>
     </div>
+    <Footer />
   </>
   )
 }

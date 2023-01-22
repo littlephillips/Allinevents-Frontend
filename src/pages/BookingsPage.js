@@ -76,8 +76,6 @@ const handleSubmit = async (e) => {
     }
     
 
-
-
 // calender input two weeks from today
     function addTwoWeeks(){
         let today = new Date();

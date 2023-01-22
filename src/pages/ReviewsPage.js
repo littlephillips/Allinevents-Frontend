@@ -11,7 +11,7 @@ function Reviews() {
         const [reviews, setReviews] = useState([]);
 
         useEffect(() => {
-            fetch('http://localhost:3000/comments')
+            fetch('http://35.172.230.181:3010/reviews')
                 .then(response => response.json())
                 .then(reviews => setReviews(reviews))
 

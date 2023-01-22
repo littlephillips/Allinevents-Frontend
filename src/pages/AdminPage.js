@@ -27,7 +27,7 @@ function Admin() {
 
 
     const removeBooking = (id) => {
-        fetch(`/http://35.172.230.181:3010/bookings/${id}`,
+        fetch(`http://35.172.230.181:3010/bookings/${id}`,
             {
                 method: 'DELETE',
                 headers: {
@@ -53,7 +53,7 @@ function Admin() {
 
 
     const removeEngagement = (id) => {
-        fetch(`/http://35.172.230.181:3010/engagements/${id}`,
+        fetch(`http://35.172.230.181:3010/engagements/${id}`,
             {
                 method: 'DELETE',
                 headers: {

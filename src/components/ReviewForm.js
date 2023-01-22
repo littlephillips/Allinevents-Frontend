@@ -10,7 +10,7 @@ function ReviewForm({handleNewReview}) {
 
   const handleSaveReview = async (e) => {
         e.preventDefault();
-          const res = await fetch("http://localhost:3000/comments", {
+          const res = await fetch("http://35.172.230.181:3010/reviews", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -36,8 +36,6 @@ function ReviewForm({handleNewReview}) {
   function handleChange(e){
     setFormData({...formData, [e.target.name]:e.target.value})
   }
-  
-
 
   return(
     <>   
